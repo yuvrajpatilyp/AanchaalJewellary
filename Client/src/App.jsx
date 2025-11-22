@@ -1,9 +1,12 @@
 import React from 'react'
+import Products from './HomePage/Products'
+import SlideBanner from './HomePage/SlideBanner'
 
 function App() {
   return (
     <div>
-      <h1>hii</h1>
+     {/* <Products/> */}
+     <SlideBanner/>
     </div>
   )
 }
