@@ -17,50 +17,48 @@ export default function CategoryBar() {
 
   return (
     <>
-      <div className="flex justify-center items-center gap-8 py-4 text-sm font-medium text-gray-700 border-b">
+      <div 
+        className="relative"
+        onMouseLeave={() => setActive(null)}
+      >
+        <div className="flex justify-center items-center gap-8 py-4 text-sm font-medium text-gray-700 border-b">
 
-        {categories.map((cat, i) => (
+          {categories.map((cat, i) => (
+            <div 
+              key={i} 
+              className="relative cursor-pointer"
+              onMouseEnter={() => cat.sub.length > 0 && setActive(i)}
+            >
+              <span className={`hover:text-black ${active === i ? "font-bold" : ""}`}>
+                {cat.name}
+              </span>
+
+              {active === i && (
+                <div className="absolute left-0 right-0 h-0.5 bg-red-600 mt-1"></div>
+              )}
+            </div>
+          ))}
+
+          <div className="border-l h-6"></div>
+
+          <FaSearch 
+            className="text-gray-700 text-lg cursor-pointer hover:text-black"
+            onClick={() => setShowSearch(!showSearch)}
+          />
+        </div>
+
+        {/* SUB MENU HOLDS NOW 👇 */}
+        {active !== null && categories[active].sub.length > 0 && (
           <div 
-            key={i} 
-            className="relative cursor-pointer "
-            onMouseEnter={() => cat.sub.length > 0 && setActive(i)}
-            onMouseLeave={() => setActive(null)}
+            className="flex justify-center gap-10 py-4 border-b text-xs font-medium bg-white"
           >
-            <span className={`hover:text-black ${active === i ? "font-bold" : ""}`}>
-              {cat.name}
-            </span>
-
-            {/* Active underline */}
-            {active === i && (
-              <div className="absolute left-0 right-0 h-0.5 bg-red-600 mt-1"></div>
-            )}
+            {categories[active].sub.map((item, idx) => (
+              <span key={idx} className="hover:text-black cursor-pointer">{item}</span>
+            ))}
           </div>
-        ))}
-
-        {/* Separator */}
-        <div className="border-l h-6"></div>
-
-        {/* Search Icon */}
-        <FaSearch 
-          className="text-gray-700 text-lg cursor-pointer hover:text-black"
-          onClick={() => setShowSearch(!showSearch)}
-        />
+        )}
       </div>
 
-      {/* -------- SUB MENU DROPDOWN ---------- */}
-      {active !== null && categories[active].sub.length > 0 && (
-        <div 
-          className="flex justify-center gap-10 py-4 border-b text-xs font-medium"
-          onMouseEnter={() => setActive(active)}
-          onMouseLeave={() => setActive(null)}
-        >
-          {categories[active].sub.map((item, idx) => (
-            <span key={idx} className="hover:text-black cursor-pointer">{item}</span>
-          ))}
-        </div>
-      )}
-
-      {/* -------- SEARCH BAR ---------- */}
       {showSearch && (
         <div className="flex justify-center py-6">
           <input 

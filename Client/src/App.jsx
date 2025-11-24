@@ -21,7 +21,6 @@ import SilverRings from './Pages/SilverRings'
 function App() {
   return (
     <div>
-      <NavigationBar/>
       <CategoryBar/>
 
       <Routes>
@@ -59,6 +58,9 @@ function App() {
        
       </Routes>
     </div>
+    // <Routes>
+    //   <Route path="/" element={<Footer/>} />
+    // </Routes>
   )
 }
 

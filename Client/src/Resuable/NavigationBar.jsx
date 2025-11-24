@@ -13,7 +13,7 @@ function NavigationBar() {
       </div>
 
       <h1 className=" md:text-3xl font-serif font-semibold tracking-widest text-gray-900 w-full md:w-auto text-center py-1 md:py-0">
-        Anchanl Jewellery
+        Aanchal Jewellery
       </h1>
 
       <div className="flex gap-4 md:gap-6 text-lg md:text-xl text-gray-700 w-full md:w-auto justify-center md:justify-end py-2 md:py-0">
