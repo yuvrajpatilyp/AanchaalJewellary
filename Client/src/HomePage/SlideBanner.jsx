@@ -1,6 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import { Link } from "react-router-dom";
 import "swiper/css";
 
 function SlideBanner() {
@@ -10,6 +11,7 @@ function SlideBanner() {
       title: "Elegance in Every Pearl",
       desc: "Wear the beauty that never fades",
       btn: "Shop Now",
+      link: "/pearl",
       titleStyle:
         "text-xl sm:text-2xl md:text-4xl font-extrabold bg-gradient-to-r from-yellow-200 to-yellow-400 bg-clip-text text-transparent tracking-wide drop-shadow-xl",
       descStyle: "text-xs sm:text-sm md:text-lg text-white drop-shadow-lg",
@@ -23,6 +25,7 @@ function SlideBanner() {
       img: "src/assets/slide-img5.jpg",
       title: "Sparkle That Moves With You",
       btn: "Explore Now",
+      link: "/earrings",
       titleStyle:
         "text-2xl sm:text-4xl md:text-5xl font-serif italic text-white drop-shadow-[0_4px_10px_rgba(0,0,0,0.7)]",
       descStyle: "text-xs sm:text-sm md:text-lg text-yellow-300 tracking-wider drop-shadow-lg",
@@ -89,22 +92,23 @@ function SlideBanner() {
         {slides.map((slide, i) => (
           <SwiperSlide
             key={i}
-            className="!w-[85%] sm:!w-[80%] md:!w-[70%] lg:!w-[80%] relative"
+            className="w-[85%]! sm:w-[80%]! md:w-[70%]! lg:w-[80%]! relative"
           >
+        <Link to={slide.link}>
             <img
               src={slide.img}
               alt=""
-              className="w-full h-[180px] sm:h-[240px] md:h-[350px] lg:h-[550px] object-cover rounded-xl shadow-xl"
+              className="w-full h-[180px] sm:h-60 md:h-[350px] lg:h-[550px] object-cover rounded-xl shadow-xl"
             />
 
-            {/* TEXT OVERLAY */}
-            <div
-              className={`absolute ${slide.positionX} ${slide.positionY} -translate-y-1/2 space-y-2 max-w-[260px] sm:max-w-[350px]`}
+          <div
+            className={`absolute ${slide.positionX} ${slide.positionY} -translate-y-1/2 space-y-2 max-w-[260px] sm:max-w-[350px]`}
             >
-              <h2 className={slide.titleStyle}>{slide.title}</h2>
-              <p className={slide.descStyle}>{slide.desc}</p>
-              <button className={slide.btnStyle}>{slide.btn}</button>
-            </div>
+            <h2 className={slide.titleStyle}>{slide.title}</h2>
+            <p className={slide.descStyle}>{slide.desc}</p>
+            <button className={slide.btnStyle}>{slide.btn}</button>
+          </div>
+        </Link>
           </SwiperSlide>
         ))}
       </Swiper>

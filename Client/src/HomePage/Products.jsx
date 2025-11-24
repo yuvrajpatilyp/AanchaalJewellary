@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "./Card";
+import Card from "../Resuable/Card"
 
 function Products() {
   function handleAddToCart(product) {
@@ -16,8 +16,8 @@ function Products() {
           title="Diamond Ring"
           newprice="₹25,000"
           oldprice="₹30,000"
-          image="src\assets\Bangles5.webp"
-          hoverImage="src\assets\bangles6.webp"
+          image="src\assets\pearl1.webp"
+          hoverImage="src\assets\pearl1hover.webp"
           Bestseller="Bestseller"
           onAddToCart={handleAddToCart}
         />
