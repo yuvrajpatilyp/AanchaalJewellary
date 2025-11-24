@@ -1,6 +1,6 @@
 import React from 'react'
-import NavigationBar from './Resuable/NavigationBar'
-import CategoryBar from './Resuable/CategoryBar'
+import NavigationBar from './Reusable/NavigationBar'
+import CategoryBar from './Reusable/CategoryBar'
 import GoldBangles from './Pages/GoldBangles'
 import GoldEarrings from './Pages/GoldEarrings'
 import GoldNecklace from './Pages/GoldNecklace'
@@ -17,10 +17,13 @@ import SilverBangles from './Pages/SilverBangles'
 import SilverEarrings from './Pages/SilverEarrings'
 import SilverNecklace from './Pages/SilverNecklace'
 import SilverRings from './Pages/SilverRings'
+import { Route, Routes } from 'react-router-dom'
+import Footer from './Reusable/Footer'
 
 function App() {
   return (
     <div>
+      <NavigationBar />
       <CategoryBar/>
 
       <Routes>
@@ -50,17 +53,17 @@ function App() {
          {/* <Route path="/silver/bangles" element={<SilverBangles />} />
          <Route path="/silver/earrings" element={<SilverEarrings />} />
          <Route path="/silver/necklace" element={<SilverNecklace />} /> */}
-         <Route path="/silver/rings" element={<SilverRings />} />
+         <Route path="/silver/silverrings" element={<SilverRings />} />
 
        
        
        
        
       </Routes>
+       <Footer />
     </div>
-    // <Routes>
-    //   <Route path="/" element={<Footer/>} />
-    // </Routes>
+   
+   
   )
 }
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Card from "../Resuable/Card";
+
 import Ring1 from '../assets/Silver/SilverRings/Charming Silver Floral Adjustable Ring.jpg'
 import Ring2 from '../assets/Silver/SilverRings/Dazzling Silver Square Stone Chain Ring.jpg'
 import Ring3 from '../assets/Silver/SilverRings/Elegant Silver Round Stone Chain Ring.jpg'
@@ -8,6 +8,7 @@ import Ring5 from '../assets/Silver/SilverRings/Glossy Rectangular Stone Adjusta
 import Ring6 from '../assets/Silver/SilverRings/Graceful Linked Design Silver Ring.jpg'
 import Ring7 from '../assets/Silver/SilverRings/Magical White Stone Silver Ring.jpg'
 import Ring8 from '../assets/Silver/SilverRings/Perfect Twirl Adjustable Silver Ring.jpg'
+import Card from '../Reusable/Card'
 
 function SilverRings() {
      const [cart, setCart] = useState([]);
@@ -22,15 +23,15 @@ function SilverRings() {
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 <Card
                  image={Ring1}
-                  title="Charming Silver Adjustable Ring" 
+                  title="Charming Silver Ring" 
                   newprice="750" 
                   oldprice="1,000" 
-                  discount="25%" 
+                discount="25%" 
                   onAddToCart={addToCart}
                    />
                 <Card 
                 image={Ring2} 
-                title="Dazzling Silver Stone Chain Ring" 
+                title="Dazzling Silver Chain Ring" 
                 newprice="1,200" 
                 oldprice="1,500" 
                 discount="20%" 
@@ -62,7 +63,7 @@ function SilverRings() {
                 />
                 <Card 
                 image={Ring6} 
-                title="Graceful Linked Design Silver Ring" 
+                title="Graceful Design Silver Ring" 
                 newprice="850" 
                 oldprice="1,100" 
                 discount="22%" 
@@ -70,7 +71,7 @@ function SilverRings() {
                 />
                 <Card 
                 image={Ring7} 
-                title="Magical White Stone Silver Ring " 
+                title="Magical Stone Silver Ring " 
                 newprice="1,500" 
                 oldprice="2,000" 
                 discount="25%" 
