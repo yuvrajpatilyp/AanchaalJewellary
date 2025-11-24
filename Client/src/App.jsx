@@ -1,13 +1,17 @@
 import React from 'react'
 import NavigationBar from './Resuable/NavigationBar'
 import CategoryBar from './Resuable/CategoryBar'
+import Footer from './Resuable/Footer'
+import { Route, Routes } from 'react-router-dom'
 
 function App() {
   return (
     <div>
-      <NavigationBar/>
       <CategoryBar/>
     </div>
+    // <Routes>
+    //   <Route path="/" element={<Footer/>} />
+    // </Routes>
   )
 }
 
