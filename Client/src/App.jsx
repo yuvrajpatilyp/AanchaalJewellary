@@ -1,7 +1,7 @@
 import React from 'react'
-import NavigationBar from './Resuable/NavigationBar'
-import CategoryBar from './Resuable/CategoryBar'
-import Footer from './Resuable/Footer'
+import NavigationBar from './Reusable/NavigationBar'
+import CategoryBar from './Reusable/CategoryBar'
+import Footer from './Reusable/Footer'
 import { Route, Routes } from 'react-router-dom'
 
 function App() {
