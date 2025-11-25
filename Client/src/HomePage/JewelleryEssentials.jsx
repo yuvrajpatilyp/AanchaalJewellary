@@ -1,20 +1,32 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 
 function JewelleryEssentials() {
   return (
-    <div className='flex  flex-row '>
-        <div>
-            <div className='h-[250px] w-[400px] '>
-                <img src='/src/assets/casualwear.jpg' className=' '></img>
-                
-            </div>
-            <div className='flex-2 object-contain h-[250px] w-[400px] '>
-                <img src='/src/assets/tradditionalwear.jpg' className=''></img>
-            </div>
-            <div className='object-contain h-[250px] w-[400px] '>
-                <img src='/src/assets/partwear.jpg' className=''></img>
-            </div>
-        </div>
+    <div className='flex  gap-5 max-w-5xl mx-auto px-4 py-10  '> 
+        
+        <Link to='/casual'> 
+            <div className=' place-items-center font-serif text-xl italic '>
+            <img src='/src/assets/casuale.jpg ' 
+                 className=' rounded-xl border-4 border-[#eab676] shadow-xl h-[350px] w-[400px] transition delay-150 duration-400 ease-in hover:-translate-y-1 hover:scale-110'></img>
+              <p className='py-4  text-2xl capitalize '> Casual wear </p>    
+            </div> </Link>
+
+         <Link to='/tradditional'>
+         <div className=' place-items-center text-xl font-serif italic grayscale-20'>
+            <img src='/src/assets/tradditionalwear.jpg'
+                 className=' rounded-xl border-4 border-[#eab676]  shadow-xl h-[350px] w-[400px]  transition delay-150 duration-400 ease-in hover:-translate-y-1 hover:scale-110'></img>
+            <p className='py-4 text-2xl capitalize'> Traddional wear </p>
+            </div></Link>
+
+        <Link to='/partywear'>
+        <div className='  place-items-center text-xl font-serif italic grayscale-50'>
+               <img src='/src/assets/partwear.jpg' 
+                className='  rounded-xl border-4 border-[#eab676]  shadow-xl h-[350px] w-[400px]  transition delay-150 duration-400 ease-in hover:-translate-y-1 hover:scale-110'></img>
+                <p className='py-4 text-2xl capitalize'> party wear </p>
+        </div></Link>
+        
 
     </div>
   )
