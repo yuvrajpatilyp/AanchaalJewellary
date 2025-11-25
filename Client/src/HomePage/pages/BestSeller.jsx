@@ -19,9 +19,9 @@ const PearlBanner = () => {
           <p className="text-[11px] sm:text-sm md:text-lg opacity-80">
            Check what’s trending @AANCHAL
           </p>
-          <Link to="/shop" className=" bg-red-500 hover:bg-red-600 transition-all duration-300 w-fit 
+          <Link to="/shop" className=" bg-red-400 hover:bg-red-600 transition-all duration-300 w-fit 
           flex items-center gap-2 text-white font-medium text-[10px] sm:text-sm md:text-lg
-            px-3 sm:px-5 md:px-6 py-1 sm:py-2 md:py-3 rounded-full" >
+            px-3 sm:px-5 md:px-6 py-1 sm:py-2 md:py-3 rounded" >
             Shop Now
           </Link>
        </div>

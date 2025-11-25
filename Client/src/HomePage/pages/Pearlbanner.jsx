@@ -111,6 +111,11 @@ function PearlPage() {
   ];
   
 const [products, setProducts] = useState(productsData);
+
+const parsePrice = (price) => {
+  return Number(price.replace(/,/g, ""));
+};
+
 const handleSort = (e) => {
   const value = e.target.value;
 
