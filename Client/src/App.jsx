@@ -1,4 +1,5 @@
 import React from 'react'
+<<<<<<< HEAD
 
 import CasualWear from './HomePage/CasualWear'
 import Home from './HomePage/Home'
@@ -12,6 +13,12 @@ import Kidscollection from './HomePage/Kidscollection'
 
 
 
+=======
+import NavigationBar from './Reusable/NavigationBar'
+import CategoryBar from './Reusable/CategoryBar'
+import Footer from './Reusable/Footer'
+import { Route, Routes } from 'react-router-dom'
+>>>>>>> cc1fab37faaccb8f37d8f784114a8eae2d9da096
 
 function App() {
   return (
@@ -31,6 +38,9 @@ function App() {
         
       
     </div>
+    // <Routes>
+    //   <Route path="/" element={<Footer/>} />
+    // </Routes>
   )
 }
 
