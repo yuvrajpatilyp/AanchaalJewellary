@@ -1,16 +1,24 @@
 import React from 'react'
-import NavigationBar from '../Resuable/NavigationBar'
+import SlideBanner from '../HomePage/SlideBanner'
 import JewelleryEssentials from './JewelleryEssentials'
 import Shopbygen from './Shopbygen'
-
-
+import BestSeller from './pages/BestSeller'
+import NewArrival from './NewArrival'
+import FeatureSection from './FeatureSection'
 
 function Home() {
   return (
     <div>
-              < NavigationBar/>
+              <SlideBanner/>
+              
               <JewelleryEssentials/>
+              <BestSeller/>
+
               <Shopbygen/>
+              <NewArrival/>
+              <FeatureSection/>
+
+              
          
               
     </div>
