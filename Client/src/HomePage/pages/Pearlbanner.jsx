@@ -1,7 +1,7 @@
 
  import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Card from "../../Resuable/Card";
+import Card from "../../Reusable/Card";
 
 function PearlPage() {
   const handleAddToCart = () => {
@@ -15,7 +15,7 @@ function PearlPage() {
      oldprice:"5,999",
      image:"src/assets/pearl1.webp",
      hoverImage:"src/assets/pearl1hover.webp",
-     Bestseller: true,
+     Bestseller:"bestseller",
      onAddToCart: handleAddToCart,
     },
     {
@@ -24,7 +24,7 @@ function PearlPage() {
      oldprice:"5,999",
      image:"src/assets/pearl11.webp",
      hoverImage:"src/assets/pearl11hover.webp",
-     Bestseller: false,
+     
      onAddToCart: handleAddToCart,
     },
     {
@@ -33,7 +33,7 @@ function PearlPage() {
      oldprice:"7,999",
      image:"src/assets/pearl10.webp",
      hoverImage:"src/assets/pearl10hover.webp",
-     Bestseller: false,
+     
      onAddToCart: handleAddToCart,
     },
     {
@@ -42,7 +42,7 @@ function PearlPage() {
      oldprice:"5,999",
      image:"src/assets/pearl9.webp",
      hoverImage:"src/assets/pearl9hover.webp",
-     Bestseller: true,
+     
      onAddToCart: handleAddToCart,
     },
      {
@@ -51,7 +51,7 @@ function PearlPage() {
      oldprice:"7,999",
      image:"src/assets/pearl8.webp",
      hoverImage:"src/assets/pearl8hover.webp",
-     Bestseller: false,
+     
      onAddToCart: handleAddToCart,
     },
     {
@@ -60,7 +60,7 @@ function PearlPage() {
      oldprice:"5,999",
      image:"src/assets/pearl7.webp",
      hoverImage:"src/assets/pearl7hover.webp",
-     Bestseller: false,
+    
      onAddToCart: handleAddToCart,
     },
     {
@@ -69,7 +69,7 @@ function PearlPage() {
      oldprice:"5,999",
      image:"src/assets/pearl5.webp",
      hoverImage:"src/assets/pearl5hover.webp",
-     Bestseller: true,
+     
      onAddToCart: handleAddToCart,
     },
     {
@@ -78,7 +78,7 @@ function PearlPage() {
      oldprice:"7,999",
      image:"src/assets/pearl4.webp",
      hoverImage:"src/assets/pearl4hover.webp",
-     Bestseller: false,
+     
      onAddToCart: handleAddToCart,
     },
     {
@@ -87,7 +87,7 @@ function PearlPage() {
      oldprice:"7,999",
      image:"src/assets/pearl6.webp",
      hoverImage:"src/assets/pearl6hover.webp",
-     Bestseller: true,
+     
      onAddToCart: handleAddToCart,
     },
     {
@@ -96,7 +96,7 @@ function PearlPage() {
      oldprice:"7,999",
      image:"src/assets/pearl3.webp",
      hoverImage:"src/assets/pearl3hover.webp",
-     Bestseller: false,
+     
      onAddToCart: handleAddToCart,
     },
     {
@@ -105,7 +105,7 @@ function PearlPage() {
      oldprice:"7,999",
      image:"src/assets/pearl2.jpg",
      hoverImage:"src/assets/pearl2hover.webp",
-     Bestseller: false,
+     
      onAddToCart: handleAddToCart,
     },
   ];
@@ -113,8 +113,6 @@ function PearlPage() {
 const [products, setProducts] = useState(productsData);
 const handleSort = (e) => {
   const value = e.target.value;
-
-  const parsePrice = (price) => Number(price.replace(/,/g, "")); 
 
   if (value === "low-high") {
     setProducts(
@@ -131,33 +129,35 @@ const handleSort = (e) => {
   if (value === "new") {
     setProducts([...productsData]);
   }
-
-  if (value === "bestseller") {
-    setProducts(productsData.filter((item) => item.Bestseller === true));
-  }
 };
 
   return (
     <div className="w-full">
-        <div className="relative w-full h-[260px] sm:h-[350px] md:h-[450px] lg:h-[520px] overflow-hidden shadow-xl">
+      <div className="relative w-full h-[260px] sm:h-[350px] md:h-[450px] lg:h-[520px] overflow-hidden shadow-xl">
         <img
-          src="src\assets\slide-img6.jpg"
+          src="src/assets/slide-img6.jpg"
           className="w-full h-full object-cover"
           alt="Pearl Banner"
         />
 
-        <div className="absolute right-3 top-2/3 -translate-y-1/2 text-black space-y-3">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold drop-shadow-xl">
-            Elegance in Every Pearl
-          </h1>
-          <p className="text-sm sm:text-lg max-w-[320px] drop-shadow-lg">
-            Experience luxury crafted for forever moments.
-          </p>
-          <button className="border border-white text-black px-6 sm:px-8 py-2 font-semibold hover:bg-white hover:text-black transition cursor-pointer">
-            Shop Now
-          </button>
-        </div>
-      </div>
+       <div
+         className="
+         absolute right-2 sm:right-6 md:right-10 bottom-2 sm:bottom-8 md:bottom-14 lg:bottom-16 text-black space-y-2 sm:space-y-3  drop-shadow-xl" >
+       <h1
+        className=" text-xl sm:text-3xl md:text-5xl font-bold " >
+        Elegance in Every Pearl
+       </h1>
+
+       <p className=" text-[10px] sm:text-sm md:text-lg max-w-[260px] sm:max-w-[320px] " >
+         Experience luxury crafted for forever moments.
+       </p>
+
+       <button className=" border border-black text-black px-3 sm:px-6 md:px-8 py-1 sm:py-2 md:py-3 text-[10px] sm:text-sm md:text-base font-semibold hover:bg-white hover:text-blacktransition cursor-pointer">
+        Shop Now
+       </button>
+     </div>
+    </div>
+
       {/*Sort By*/}
          <div className="max-w-6xl mx-auto mt-6 px-3 md:px-0">
         <div className="flex items-center gap-2 text-gray-500 text-sm">
@@ -181,7 +181,6 @@ const handleSort = (e) => {
               <option value="low-high">Low to High</option>
               <option value="high-low">High to Low</option>
               <option value="new">New Arrivals</option>
-              <option value="bestseller">Bestseller</option>
             </select>
           </div>
         </div>
@@ -197,6 +196,7 @@ const handleSort = (e) => {
             oldprice={`₹${item.oldprice}`}
             image={item.image}
             hoverImage={item.hoverImage}
+            Bestseller={item.Bestseller}
             onAddToCart={item.onAddToCart}
           />
         ))}

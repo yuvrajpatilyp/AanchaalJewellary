@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Card from "../../Resuable/Card";
+import Card from "../../Reusable/Card";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -99,7 +99,7 @@ function Earringsbanner() {
     if (value === "bestseller") setProducts(productsData.filter((item) => item.Bestseller));
   };
 
-  // SCROLL FUNCTION
+  // scroll function
   const handleScrollToProducts = () => {
     document.getElementById("products-section")?.scrollIntoView({
       behavior: "smooth",
@@ -109,7 +109,7 @@ function Earringsbanner() {
   return (
     <div className="w-full">
 
-      {/* Banner - full clickable */}
+      {/* Banner */}
       <div
         onClick={handleScrollToProducts}
         className="relative w-full h-[260px] sm:h-[350px] md:h-[450px] lg:h-[520px] overflow-hidden cursor-pointer"
@@ -176,7 +176,7 @@ function Earringsbanner() {
         </div>
       </div>
 
-      {/* PRODUCT GRID */}
+      {/* product grid */}
       <div
         id="products-section"
         className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 px-4 py-10"

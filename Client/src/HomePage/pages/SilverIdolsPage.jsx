@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Card from "../../Resuable/Card";
+import Card from "../../Reusable/Card";
 
 const SilverIdolsPage = () => {
   const handleAddToCart = () => {
