@@ -66,12 +66,29 @@ const ShopBestseller = () => {
 
   const [products, setProducts] = useState(productsData);
 
-  const handleSort = (e) => {
-    const value = e.target.value;
-    if (value === "low-high") setProducts([...products].sort((a, b) => parse(a.newprice) - parse(b.newprice)));
-    if (value === "high-low") setProducts([...products].sort((a, b) => parse(b.newprice) - parse(a.newprice)));
-    if (value === "new") setProducts([...productsData]);
-  };
+const parsePrice = (price) => {
+  return Number(price.replace(/,/g, ""));
+};
+
+const handleSort = (e) => {
+  const value = e.target.value;
+
+  if (value === "low-high") {
+    setProducts(
+      [...products].sort((a, b) => parsePrice(a.newprice) - parsePrice(b.newprice))
+    );
+  }
+
+  if (value === "high-low") {
+    setProducts(
+      [...products].sort((a, b) => parsePrice(b.newprice) - parsePrice(a.newprice))
+    );
+  }
+
+  if (value === "new") {
+    setProducts([...productsData]);
+  }
+};
 
   return (
     <div className="w-full">

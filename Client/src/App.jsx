@@ -17,10 +17,10 @@ import MangalsutraPage from './HomePage/pages/MangalsutraPage'
 function App() {
   return (
     <div>
-      <NavigationBar/>
+      {/* <NavigationBar/>
       {/*routes & paths*/}
        <Routes>
-
+ 
            {/* */}
           <Route path='/' element={<Home/>}/>
           <Route path='/casual' element={<CasualWear/>} />
@@ -44,8 +44,8 @@ function App() {
           <Route path='/mangalsutra' element={<MangalsutraPage />} />
             
        </Routes> 
-       <Footer />   
-      
+       <Footer />    
+     
     </div>
     // <Routes>
     //   <Route path="/" element={<Footer/>} />
