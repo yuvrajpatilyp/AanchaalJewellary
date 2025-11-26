@@ -21,6 +21,8 @@ function App() {
       <Route path='/silver-idols' element={<SilverIdolsPage />} />
       <Route path='/mangalsutra' element={<MangalsutraPage />} /> 
       <Route path='/shop' element={<ShopBestseller/>} />
+    
+
      </Routes>
      <Footer />
     </div>
