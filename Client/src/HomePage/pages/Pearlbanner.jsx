@@ -2,6 +2,7 @@
  import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Card from "../../Reusable/Card";
+import SortDropdown from "../../Reusable/SortDropdown";
 
 function PearlPage() {
   const handleAddToCart = () => {
@@ -24,7 +25,7 @@ function PearlPage() {
      oldprice:"5,999",
      image:"src/assets/pearl11.webp",
      hoverImage:"src/assets/pearl11hover.webp",
-     
+      Bestseller:"bestseller",
      onAddToCart: handleAddToCart,
     },
     {
@@ -33,7 +34,7 @@ function PearlPage() {
      oldprice:"7,999",
      image:"src/assets/pearl10.webp",
      hoverImage:"src/assets/pearl10hover.webp",
-     
+      Bestseller:"bestseller",
      onAddToCart: handleAddToCart,
     },
     {
@@ -42,7 +43,7 @@ function PearlPage() {
      oldprice:"5,999",
      image:"src/assets/pearl9.webp",
      hoverImage:"src/assets/pearl9hover.webp",
-     
+      Bestseller:"bestseller",
      onAddToCart: handleAddToCart,
     },
      {
@@ -51,7 +52,7 @@ function PearlPage() {
      oldprice:"7,999",
      image:"src/assets/pearl8.webp",
      hoverImage:"src/assets/pearl8hover.webp",
-     
+      Bestseller:"bestseller",
      onAddToCart: handleAddToCart,
     },
     {
@@ -69,7 +70,7 @@ function PearlPage() {
      oldprice:"5,999",
      image:"src/assets/pearl5.webp",
      hoverImage:"src/assets/pearl5hover.webp",
-     
+      Bestseller:"bestseller",
      onAddToCart: handleAddToCart,
     },
     {
@@ -87,7 +88,7 @@ function PearlPage() {
      oldprice:"7,999",
      image:"src/assets/pearl6.webp",
      hoverImage:"src/assets/pearl6hover.webp",
-     
+      Bestseller:"bestseller",
      onAddToCart: handleAddToCart,
     },
     {
@@ -105,40 +106,24 @@ function PearlPage() {
      oldprice:"7,999",
      image:"src/assets/pearl2.jpg",
      hoverImage:"src/assets/pearl2hover.webp",
-     
+     Bestseller:"bestseller", 
      onAddToCart: handleAddToCart,
     },
   ];
   
 const [products, setProducts] = useState(productsData);
 
-const parsePrice = (price) => {
-  return Number(price.replace(/,/g, ""));
-};
 
-const handleSort = (e) => {
-  const value = e.target.value;
-
-  if (value === "low-high") {
-    setProducts(
-      [...products].sort((a, b) => parsePrice(a.newprice) - parsePrice(b.newprice))
-    );
-  }
-
-  if (value === "high-low") {
-    setProducts(
-      [...products].sort((a, b) => parsePrice(b.newprice) - parsePrice(a.newprice))
-    );
-  }
-
-  if (value === "new") {
-    setProducts([...productsData]);
-  }
-};
-
+ // scroll function
+   const handleScrollToProducts = () => {
+    const section = document.getElementById("products-section");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
-    <div className="w-full">
-      <div className="relative w-full h-[260px] sm:h-[350px] md:h-[450px] lg:h-[520px] overflow-hidden shadow-xl">
+    <div   className="w-full">
+      <div  onClick={handleScrollToProducts} className="relative w-full h-[260px] sm:h-[350px] md:h-[450px] lg:h-[520px] overflow-hidden shadow-xl cursor-pointer">
         <img
           src="src/assets/slide-img6.jpg"
           className="w-full h-full object-cover"
@@ -177,22 +162,18 @@ const handleSort = (e) => {
           </h1>
 
           <div className="flex gap-4 mt-2 md:mt-0">
-
-            <select
-              onChange={handleSort}
-              className="border px-4 py-2 rounded-md shadow-sm hover:shadow-md cursor-pointer"
-            >
-              <option>Sort By: Best Matches</option>
-              <option value="low-high">Low to High</option>
-              <option value="high-low">High to Low</option>
-              <option value="new">New Arrivals</option>
-            </select>
+            <SortDropdown
+                     productsData={productsData}
+                     onSort={(updatedList) => setProducts(updatedList)}
+                  />
           </div>
         </div>
       </div>
 
       {/* product card list */}
-      <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 px-4 py-10">
+      <div 
+      id="products-section"
+      className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 px-4 py-10">
         {products.map((item, index) => (
           <Card
             key={index}

@@ -3,13 +3,13 @@ import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom"; 
   
 const categories = [
-  { name: "ALL JEWELLERY", key: "all", sub: ["FINGER RINGS","NOSE PIN","BANGLES","EARRINGS","MANGALSUTRA","NECKLACES","BRACELETS"] },
+  { name: "ALL JEWELLERY", key: "all", sub: ["RINGS","NOSE PIN","BANGLES","EARRINGS","MANGALSUTRA","NECKLACES","BRACELETS"] },
   { name: "GOLD", key: "gold", sub: ["ALL CREATION", "GOLD RINGS", "GOLD NOSE PIN", "GOLD EARRINGS", "GOLD MANGALSUTRA", "GOLD NECKLACES","GOLD BRACELETS"] },
   { name: "DIAMOND", key: "diamond", sub: ["ALL CREATION", "DIAMOND RINGS", "DIAMOND NOSE PIN", "DIAMOND EARRINGS", "DIAMOND MANGALSUTRA", "DIAMOND NECKLACES","DIAMOND BRACELETS"] },
   { name: "SILVER", key: "silver", sub: ["ALL CREATION", "SILVER RINGS", "SILVER NOSE PIN", "SILVER EARRINGS", "SILVER MANGALSUTRA", "SILVER NECKLACES","SILVER BRACELETS"] },
   { name: "PLATINUM", key: "platinum", sub: ["ALL CREATION", "PLATINUM RINGS", "PLATINUM NOSE PIN", "PLATINUM EARRINGS", "PLATINUM MANGALSUTRA", "PLATINUM NECKLACES","PLATINUM BRACELETS"] },
-  { name: "WEDDING", key: "wedding", sub: [] },
-  { name: "COLLECTIONS", key: "collections", sub: ["CASUAL WEAR","TRADDIONAL WEAR","PARTY WEAR"] },
+  { name: "WEDDING", key: "wedding", sub: ["HALDI & MEHENDI COLLECTION","SANGEET COLLECTION","BRIDAL COLLECTION"] },
+  { name: "COLLECTIONS", key: "collections", sub: ["CASUAL WEAR","TRADITIONAL WEAR","PARTY WEAR"] },
 ];
   
 export default function CategoryBar() {
