@@ -4,6 +4,8 @@ import NewArrival from "../HomePage/NewArrival";
 import BestSeller from "./pages/BestSeller";
 import FeatureSection from "./FeatureSection";
 import CategorySlider from "./CategorySlider";
+import BackToTop from "./BackToTop";
+
 
 function Home() {
   return (
@@ -12,7 +14,8 @@ function Home() {
       <CategorySlider />
       <NewArrival />
       <BestSeller />
-      <FeatureSection/>     
+      <FeatureSection/>      
+      <BackToTop />
     </div>
   );
 }

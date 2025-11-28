@@ -9,11 +9,13 @@ import SilverIdolsPage from './HomePage/pages/SilverIdolsPage';
 import MangalsutraPage from './HomePage/pages/MangalsutraPage';
 import Footer from './Reusable/Footer';
 import ShopBestseller from './HomePage/pages/ShopBestseller';
+import CategoryBar from './Reusable/CategoryBar';
 
 function App() {
   return (
     <div>
       <NavigationBar/>
+      <CategoryBar/>
      <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path="/pearl" element={<HeroBanner />} />
@@ -22,7 +24,6 @@ function App() {
       <Route path='/mangalsutra' element={<MangalsutraPage />} /> 
       <Route path='/shop' element={<ShopBestseller/>} />
     
-
      </Routes>
      <Footer />
     </div>
