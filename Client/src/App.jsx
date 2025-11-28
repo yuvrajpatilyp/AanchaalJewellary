@@ -6,13 +6,13 @@ import { Route, Routes } from 'react-router-dom'
 
 function App() {
   return (
-    <div>
-      <NavigationBar/>
-      <CategoryBar/>
-    </div>
-    // <Routes>
-    //   <Route path="/" element={<Footer/>} />
-    // </Routes>
+    // <div>
+    //   <NavigationBar/>
+    //   <CategoryBar/>
+    // </div>
+    <Routes>
+      <Route path="/" element={<Footer/>} />
+    </Routes>
   )
 }
 
