@@ -5,11 +5,13 @@ import BestSeller from './pages/BestSeller'
 import NewArrival from './NewArrival'
 import FeatureSection from './FeatureSection'
 import SlideBanner from './SlideBanner'
+import CategorySlider from './CategorySlider'
 
 function Home() {
   return (
     <div>
               <SlideBanner/>
+              <CategorySlider/>
               
               <JewelleryEssentials/>
               <BestSeller/>

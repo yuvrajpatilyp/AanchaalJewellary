@@ -17,7 +17,7 @@ import MangalsutraPage from './HomePage/pages/MangalsutraPage'
 function App() {
   return (
     <div>
-      {/* <NavigationBar/>
+        <NavigationBar/> 
       {/*routes & paths*/}
        <Routes>
  
