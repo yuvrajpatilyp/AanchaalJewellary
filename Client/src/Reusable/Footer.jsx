@@ -9,7 +9,7 @@ function Footer() {
            
           {/* Sample logo  */}
           <div>
-            <img src="src/assets/Elegant Gold and Black Logo Design.png" className="shadow-gray-300 w-40 h-40 rounded-full -ml-6" />
+            <img src="src/assets/DesignLogo.png" className="shadow-gray-300 w-40 h-40 rounded-full -ml-6" />
           </div>
  
         {/* Support Section */}

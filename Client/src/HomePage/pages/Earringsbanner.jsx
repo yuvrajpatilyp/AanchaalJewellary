@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Card from "../../Reusable/Card";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import SortDropdown from "../../Reusable/SortDropdown";
 import "swiper/css";
 
 function Earringsbanner() {
@@ -86,26 +87,15 @@ function Earringsbanner() {
   ];
 
   const [products, setProducts] = useState(productsData);
-
-  const handleSort = (e) => {
-    const value = e.target.value;
-    const parsePrice = (price) => Number(price.replace(/,/g, ""));
-
-    if (value === "low-high")
-      setProducts([...products].sort((a, b) => parsePrice(a.newprice) - parsePrice(b.newprice)));
-    if (value === "high-low")
-      setProducts([...products].sort((a, b) => parsePrice(b.newprice) - parsePrice(a.newprice)));
-    if (value === "new") setProducts([...productsData]);
-    if (value === "bestseller") setProducts(productsData.filter((item) => item.Bestseller));
-  };
+  
 
   // scroll function
-  const handleScrollToProducts = () => {
-    document.getElementById("products-section")?.scrollIntoView({
-      behavior: "smooth",
-    });
+   const handleScrollToProducts = () => {
+    const section = document.getElementById("products-section");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
   };
-
   return (
     <div className="w-full">
 
@@ -163,16 +153,10 @@ function Earringsbanner() {
             Dailywear Earrings <span className="text-gray-500">({products.length} results)</span>
           </h1>
 
-          <select
-            onChange={handleSort}
-            className="border px-4 py-2 rounded-md shadow-sm cursor-pointer mt-3 md:mt-0"
-          >
-            <option>Sort By: Best Matches</option>
-            <option value="low-high">Low to High</option>
-            <option value="high-low">High to Low</option>
-            <option value="new">New Arrivals</option>
-            <option value="bestseller">Bestseller</option>
-          </select>
+          <SortDropdown
+                     productsData={productsData}
+                     onSort={(updatedList) => setProducts(updatedList)}
+                  />
         </div>
       </div>
 

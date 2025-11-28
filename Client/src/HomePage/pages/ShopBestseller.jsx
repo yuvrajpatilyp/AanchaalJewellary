@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Card from "../../Reusable/Card";
+import SortDropdown from "../../Reusable/SortDropdown";
 
 const ShopBestseller = () => {
   const handleAddToCart = () => {
@@ -14,7 +15,7 @@ const ShopBestseller = () => {
      oldprice:"5,999",
      image:"src/assets/pearl1.webp",
      hoverImage:"src/assets/pearl1hover.webp",
-     Bestseller:"Bestseller",
+     Bestseller:"BestSeller",
      onAddToCart: handleAddToCart,
     },
     {
@@ -31,7 +32,7 @@ const ShopBestseller = () => {
       newprice: "42,699",
       oldprice: "45,999",
       image:"src/assets/earrings5.webp",
-      hoverImage:"",
+      hoverImage:"src/assets/earrings5.webp",
       Bestseller:"BestSeller",
       onAddToCart: handleAddToCart,
     },
@@ -40,7 +41,7 @@ const ShopBestseller = () => {
       newprice: "1,15,699",
       oldprice: "1,16,999",
       image: "src/assets/product8.webp",
-      hoverImage: "",
+      hoverImage: "src/assets/earrings5.webp",
       Bestseller:"BestSeller",
       onAddToCart: handleAddToCart,
     },
@@ -58,37 +59,13 @@ const ShopBestseller = () => {
       newprice: "66,699",
       oldprice: "67,999",
       image: "src/assets/earrings9.webp",
-      hoverImage: "",
-      Bestseller:"Bestseller",
+      hoverImage: "src/assets/earrings5.webp",
+      Bestseller: false,
       onAddToCart: handleAddToCart,
     }
   ];
 
   const [products, setProducts] = useState(productsData);
-
-const parsePrice = (price) => {
-  return Number(price.replace(/,/g, ""));
-};
-
-const handleSort = (e) => {
-  const value = e.target.value;
-
-  if (value === "low-high") {
-    setProducts(
-      [...products].sort((a, b) => parsePrice(a.newprice) - parsePrice(b.newprice))
-    );
-  }
-
-  if (value === "high-low") {
-    setProducts(
-      [...products].sort((a, b) => parsePrice(b.newprice) - parsePrice(a.newprice))
-    );
-  }
-
-  if (value === "new") {
-    setProducts([...productsData]);
-  }
-};
 
   return (
     <div className="w-full">
@@ -105,18 +82,11 @@ const handleSort = (e) => {
                 BestSeller <span className="text-gray-500">({products.length} Results)</span>
                 </h1>
       
-                <div className="flex gap-4 mt-2 md:mt-0">
-      
-                  <select
-                    onChange={handleSort}
-                    className="border px-4 py-2 rounded-md shadow-sm hover:shadow-md cursor-pointer"
-                  >
-                    <option>Sort By: Best Matches</option>
-                    <option value="low-high">Low to High</option>
-                    <option value="high-low">High to Low</option>
-                    <option value="new">New Arrivals</option>
-                  </select>
-                </div>
+                  <SortDropdown
+                     productsData={productsData}
+                     onSort={(updatedList) => setProducts(updatedList)}
+                  />
+            
               </div>
             </div>
 

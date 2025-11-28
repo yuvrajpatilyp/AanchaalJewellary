@@ -29,8 +29,8 @@ const NewArrivalsPage = () => {
       </div>
 
       {/* Cards */}
-      <div className="max-w-7xl mx-auto mt-[-60px] flex flex-col md:flex-row gap-6 px-4">
-
+      <div
+        className="max-w-7xl mx-auto -mt-20 md:-mt-24 lg:-mt-28 flex flex-col md:flex-row gap-6 px-4">
         {/* Card 1 */}
         <Link
           to="/silver-idols"
@@ -39,7 +39,7 @@ const NewArrivalsPage = () => {
           <img
             src="src/assets/newarrival1.jpg"
             alt="Silver Idols"
-            className="w-full h-[260px] md:h-80 object-cover"
+            className="w-full h-[300px] md:h-[350px] object-cover"
           />
           <p className="absolute bottom-4 left-6 text-black text-2xl font-semibold drop-shadow-xl">
             Silver Idols
@@ -53,8 +53,8 @@ const NewArrivalsPage = () => {
         >
           <img
             src="src/assets/newarrival2.webp"
-            alt="Floral Bloom"
-            className="w-full h-[260px] md:h-80 object-cover"
+            alt="Mangalsutra"
+            className="w-full h-[300px] md:h-[350px] object-cover"
           />
           <p className="absolute bottom-4 left-6 text-black text-2xl font-semibold drop-shadow-xl">
             Mangalsutra
@@ -66,3 +66,4 @@ const NewArrivalsPage = () => {
 };
 
 export default NewArrivalsPage;
+

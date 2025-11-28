@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Card from "../../Reusable/Card";
+import SortDropdown from "../../Reusable/SortDropdown";
 
 const SilverIdolsPage = () => {
   const handleAddToCart = () => {
@@ -14,7 +15,7 @@ const SilverIdolsPage = () => {
       oldprice: "10,999",
       image: "src/assets/product1.jpg",
       hoverImage: "",
-      Bestseller: true,
+      Bestseller: "bestseller",
     },
     {
       title: "Shri Lakshmi Silver Idol",
@@ -49,17 +50,8 @@ const SilverIdolsPage = () => {
       Bestseller: false,
     },
   ];
-
+ 
   const [products, setProducts] = useState(productsData);
-
-  const handleSort = (e) => {
-    const value = e.target.value;
-    const parse = (p) => Number(p.replace(/,/g, ""));
-    if (value === "low-high") setProducts([...products].sort((a, b) => parse(a.newprice) - parse(b.newprice)));
-    if (value === "high-low") setProducts([...products].sort((a, b) => parse(b.newprice) - parse(a.newprice)));
-    if (value === "new") setProducts([...productsData]);
-    if (value === "bestseller") setProducts(productsData.filter((item) => item.Bestseller));
-  };
 
   return (
     <div className="w-full">
@@ -75,20 +67,11 @@ const SilverIdolsPage = () => {
                 <h1 className="text-2xl md:text-3xl font-bold">
                 Silver Idols <span className="text-gray-500">({products.length} Results)</span>
                 </h1>
-      
-                <div className="flex gap-4 mt-2 md:mt-0">
-      
-                  <select
-                    onChange={handleSort}
-                    className="border px-4 py-2 rounded-md shadow-sm hover:shadow-md cursor-pointer"
-                  >
-                    <option>Sort By: Best Matches</option>
-                    <option value="low-high">Low to High</option>
-                    <option value="high-low">High to Low</option>
-                    <option value="new">New Arrivals</option>
-                    <option value="bestseller">Bestseller</option>
-                  </select>
-                </div>
+                
+                 <SortDropdown
+                     productsData={productsData}
+                     onSort={(updatedList) => setProducts(updatedList)}
+                  />
               </div>
             </div>
 
