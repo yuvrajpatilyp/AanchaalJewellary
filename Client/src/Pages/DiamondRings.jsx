@@ -40,7 +40,7 @@ function DiamondRings() {
                  />
                 <Card
                 image={Ring3}
-                title="Dual Finish Design Diamond Ring"
+                title="Dual Design Diamond Ring"
                 newprice="40000"
                 oldprice="65000"
                 discount="20%"
@@ -48,7 +48,7 @@ function DiamondRings() {
                 />
                 <Card
                 image={Ring4}
-                title="Glistening Classic Diamond Rings"
+                title="Glistening Diamond Rings"
                  newprice="60000"
                  oldprice="75000"
                  discount="20%"

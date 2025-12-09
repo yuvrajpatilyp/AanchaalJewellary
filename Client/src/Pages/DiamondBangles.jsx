@@ -40,7 +40,7 @@ function DiamondBangles() {
                  />
                 <Card
                 image={Bangle3}
-                title="Lotus Centerpiece Bangle Bracelet"
+                title="Lotus Bangle Bracelet"
                 newprice="70000"
                 oldprice="100000"
                 discount="30%"
@@ -81,7 +81,7 @@ function DiamondBangles() {
                 />
                 <Card
                 image={Bangle8}
-                title="Sparkling Interlock Circle  Bracelet"
+                title="Sparkling Interlock Bracelet"
                 newprice="95000"
                 oldprice="130000"
                 discount="27%"

@@ -31,7 +31,7 @@ function GoldBangles() {
                 <Card
                  id="Dress2"
                 image={Bangle2}
-                title="Elegnat Swril Floral Gold Bangles"
+                title="Elegnat Floral Gold Bangles"
                 newprice="52000"
                 oldprice="65000"
                 discount="20%"

@@ -8,10 +8,11 @@ function Footer() {
       <div className="max-w-8xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-10 px-20 ">
            
           {/* Sample logo  */}
-          <div>
-            <img src="src/assets/Elegant Gold and Black Logo Design.png" className="shadow-gray-300 w-40 h-40 rounded-full -ml-6" />
-          </div>
- 
+          
+         <img src="/src/assets/logo.jpg"
+          className="shadow-gray-100 w-60 h-60 rounded-full -ml-6"/>
+
+           
         {/* Support Section */}
         <div>
           <h2 className="font-serif text-2xl mb-3 ">Support</h2>

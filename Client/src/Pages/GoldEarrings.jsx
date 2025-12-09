@@ -52,7 +52,7 @@ function GoldEarrings() {
                 />
                 <Card
                 image={Earring4}
-                title="Gorgeous Floret Design Gold Earrings"
+                title="Floret Design Gold Earrings"
                  newprice="9000"
                  oldprice="12000"
                  discount="25%"
@@ -60,7 +60,7 @@ function GoldEarrings() {
                  />
                 <Card
                 image={Earring5}
-                title="Minimalist Floret Gold Earrings"
+                title=" Floret Gold Earrings"
                 newprice="11000"
                 oldprice="14000"
                 discount="21%"
@@ -76,7 +76,7 @@ function GoldEarrings() {
                 />
                 <Card
                 image={Earring7}
-                title="Starlight Harmony Gold Earrings"
+                title="Starlight Gold Earrings"
                 newprice="7000"
                 oldprice="10000"
                 discount="30%"

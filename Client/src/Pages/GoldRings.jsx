@@ -26,7 +26,7 @@ function GoldRings() {
              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                   <Card
                  image={Ring1}
-                  title="Elegant Petal Harmony Gold Ring"
+                  title="Elegant Petal Gold Ring"
                   newprice="12000"
                   oldprice="15000"
                   discount="20%"

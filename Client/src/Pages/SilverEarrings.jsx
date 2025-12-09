@@ -24,64 +24,63 @@ function SilverEarrings() {
                  image={Earring1}
                   title="Minimalistic Silver Earrings" 
                   newprice="650" 
-                  oldprice="800" 
-                  discount="19%" 
+                  oldprice="800"                   
                   onAddToCart={addToCart}
                    />
+
                 <Card 
                 image={Earring2} 
                 title="Graceful Curved Silver Earrings" 
                 newprice="1,100" 
-                oldprice="1,400" 
-                discount="21%" 
+                oldprice="1,400"                  
                 onAddToCart={addToCart}
                  />
-<Card 
+
+                <Card 
                 image={Earring3} 
                 title="Paisley Silver Jhumka Earrings" 
                 newprice="1,500" 
-                oldprice="2,000" 
-                discount="25%" 
+                oldprice="2,000"  
                 onAddToCart={addToCart} 
                 />
+
                 <Card 
                 image={Earring4} 
                 title="Luminous Silver Studs Earrings"
                  newprice="850" 
-                 oldprice="1,100" 
-                 discount="23%" 
+                 oldprice="1,100"                  
                  onAddToCart={addToCart} 
                  />
+
                 <Card 
                 image={Earring5} 
                 title="Luminous Silver Jhumka Earrings" 
                 newprice="1,250" 
-                oldprice="1,600" 
-                discount="22%" 
+                oldprice="1,600"                
                 onAddToCart={addToCart} 
                 />
+
                 <Card 
                 image={Earring6} 
                 title="Sparkling Stone Silver Earrings" 
                 newprice="1,800" 
-                oldprice="2,400" 
-                discount="25%" 
+                oldprice="2,400"                  
                 onAddToCart={addToCart} 
                 />
+
                 <Card 
                 image={Earring7} 
                 title="Stylish Black Silver Earrings " 
                 newprice="1,400" 
-                oldprice="1,800" 
-                discount="22%" 
+                oldprice="1,800"                
                 onAddToCart={addToCart} 
                 />
+
                 <Card 
                 image={Earring8} 
                 title="Stylish Flower Silver Earrings" 
                 newprice="900" 
-                oldprice="1,200" 
-                discount="25%" 
+                oldprice="1,200"                
                 onAddToCart={addToCart} 
                 />
             </div>

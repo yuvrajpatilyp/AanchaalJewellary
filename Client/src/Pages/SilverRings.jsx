@@ -25,64 +25,64 @@ function SilverRings() {
                  image={Ring1}
                   title="Charming Silver Ring" 
                   newprice="750" 
-                  oldprice="1,000" 
-                discount="25%" 
+                  oldprice="1,000"                
+                  Bestseller="Bestseller"
                   onAddToCart={addToCart}
                    />
+
                 <Card 
                 image={Ring2} 
                 title="Dazzling Silver Chain Ring" 
                 newprice="1,200" 
-                oldprice="1,500" 
-                discount="20%" 
+                oldprice="1,500"                
                 onAddToCart={addToCart}
                  />
+
                 <Card 
                 image={Ring3} 
                 title="Elegant Silver Chain Ring" 
                 newprice="650" 
-                oldprice="800" 
-                discount="18%" 
+                oldprice="800"                 
                 onAddToCart={addToCart} 
                 />
+
                 <Card 
                 image={Ring4} 
                 title="Adjustable Silver Ring"
                  newprice="500" 
-                 oldprice="650" 
-                 discount="18%" 
+                 oldprice="650"                 
                  onAddToCart={addToCart} 
                  />
+
                 <Card 
                 image={Ring5} 
                 title="Glossy Adjustable Silver Ring" 
                 newprice="1,050" 
-                oldprice="1,400" 
-                discount="25%" 
+                oldprice="1,400"                 
                 onAddToCart={addToCart} 
                 />
+
                 <Card 
                 image={Ring6} 
                 title="Graceful Design Silver Ring" 
                 newprice="850" 
-                oldprice="1,100" 
-                discount="22%" 
+                oldprice="1,100"                
                 onAddToCart={addToCart} 
                 />
+
                 <Card 
                 image={Ring7} 
                 title="Magical Stone Silver Ring " 
                 newprice="1,500" 
-                oldprice="2,000" 
-                discount="25%" 
+                oldprice="2,000"               
                 onAddToCart={addToCart} 
                 />
+
                 <Card 
                 image={Ring8} 
                 title="Perfect Twirl Silver Ring" 
                 newprice="900" 
-                oldprice="1,200" 
-                discount="25%" 
+                oldprice="1,200"                 
                 onAddToCart={addToCart} 
                 />
             </div>

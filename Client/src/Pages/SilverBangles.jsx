@@ -28,63 +28,62 @@ function SilverBangles() {
                   title="Charismatic Sterling  Bracelet" 
                   newprice="1,200" 
                   oldprice="1,500" 
-                  discount="20%" 
                   onAddToCart={addToCart}
                    />
+
                 <Card 
                 image={Bracelet2} 
                 title="Fairytale Floral Silver Bracelet" 
                 newprice="950" 
-                oldprice="1,200" 
-                discount="21%" 
+                oldprice="1,200"                  
                 onAddToCart={addToCart}
                  />
+                 
                 <Card 
                 image={Bracelet3} 
                 title=" Pearl Adjustable Silver Bracelet" 
                 newprice="1,500" 
                 oldprice="2,000" 
-                discount="25%" 
                 onAddToCart={addToCart} 
                 />
-<Card 
+                
+                <Card 
                 image={Bracelet4} 
                 title="Modern Harmony Silver Bracele"
                  newprice="1,800" 
-                 oldprice="2,400" 
-                 discount="25%" 
+                 oldprice="2,400"                  
                  onAddToCart={addToCart} 
                  />
+
                 <Card 
                 image={Bracelet5} 
                 title="Radiant Square Silver Bangles" 
                 newprice="2,200" 
-                oldprice="2,750" 
-                discount="20%" 
+                oldprice="2,750"                 
                 onAddToCart={addToCart} 
                 />
+
                 <Card 
                 image={Bracelet6} 
                 title="Resilient Link Silver Bracelet" 
                 newprice="800" 
-                oldprice="$1000" 
-                discount="20%" 
+                oldprice="$1000"                
                 onAddToCart={addToCart} 
                 />
+
                 <Card 
                 image={Bracelet7} 
                 title="Rich Amethyst Silver Bangles " 
                 newprice="1,600" 
-                oldprice="2,000" 
-                discount="20%" 
+                oldprice="2,000"                 
                 onAddToCart={addToCart} 
                 />
+
                 <Card 
                 image={Bracelet8} 
                 title="Stunning Silver Bracelett" 
                 newprice="1,350" 
-                oldprice="1,800" 
-                discount="25%" 
+                oldprice="1,800"                
                 onAddToCart={addToCart} 
                 />
             </div>

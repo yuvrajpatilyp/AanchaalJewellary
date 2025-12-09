@@ -63,7 +63,7 @@ function GoldNecklace() {
                 />
                 <Card
                 image={Necklace6}
-                title="Modern Geometry Gold Necklace"
+                title="Geometry Gold Necklace"
                 newprice="90000"
                 oldprice="120000"
                 discount="25%"

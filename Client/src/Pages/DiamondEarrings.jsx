@@ -26,63 +26,62 @@ function DiamondEarrings() {
                   title="Captivating  Diamond Earrings"
                   newprice="35000"
                   oldprice="45000"
-                  discount="22%"
                   onAddToCart={addToCart}
                    />
+
                 <Card
                 image={Earring2}
                 title="Dainty Pear Diamond Earrings"
                 newprice="55000"
-                oldprice="70000"
-                discount="21%"
+                oldprice="70000"              
                 onAddToCart={addToCart}
                  />
+
                 <Card
                 image={Earring3}
                 title="Golden  Rose Diamond Earrings"
                 newprice="28000"
-                oldprice="35000"
-                discount="28%"
+                oldprice="35000"               
                 onAddToCart={addToCart}
                 />
+
                 <Card
                 image={Earring4}
                 title=" Suidhaga Diamond Earrings"
                  newprice="48000"
-                 oldprice="60000"
-                 discount="20%"
+                 oldprice="60000"                 
                  onAddToCart={addToCart}
                  />
+
                 <Card
                 image={Earring5}
                 title="Regal Elephant Diamond Earrings"
                 newprice="65000"
-                oldprice="85000"
-                discount="23%"
+                oldprice="85000"                
                 onAddToCart={addToCart}
+
                 />
                 <Card
                 image={Earring6}
                 title="Star Threads Diamond Earrings"
                 newprice="40000"
-                oldprice="55000"
-                discount="27%"
+                oldprice="55000"                
                 onAddToCart={addToCart}
+
                 />
                 <Card
                 image={Earring7}
                 title="Timeless Oval Diamond Earring"
                 newprice="22000"
-                oldprice="28000"
-                discount="21%"
+                oldprice="28000"               
                 onAddToCart={addToCart}
+
                 />
                 <Card
                 image={Earring8}
                 title=" Dangler Diamond Earrings"
                 newprice="75000"
                 oldprice="100000"
-                discount="25%"
                 onAddToCart={addToCart}
                 />
             </div>

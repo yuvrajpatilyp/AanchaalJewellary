@@ -23,7 +23,7 @@ function Card({ title, newprice, oldprice, image, hoverImage,Bestseller, onAddTo
             src={hoverImage}
             alt="hover"
             className="w-full h-full object-cover absolute top-0 left-0 opacity-0
-            group-hover:opacity-100 transition-opacity duration-500"
+            group-hover:opacity-100 transition-opacity duration-700"
           />
  
          {Bestseller && (
@@ -46,13 +46,18 @@ function Card({ title, newprice, oldprice, image, hoverImage,Bestseller, onAddTo
       <div className="px-4 py-3">
        
         {/* Underline */}
-        <h2
+        {/* <h2
           className="text-lg font-semibold text-gray-800 text-left relative
           after:content-[''] after:absolute after:left-0 after:bottom-1 after:h-0.5 after:w-0
           group-hover:after:w-full after:bg-gray-400 after:transition-all after:duration-300 "
         >
           {title}
+        </h2> */}
+
+        <h2 className="text-lg font-semibold text-gray-800 text-left">
+         {title}
         </h2>
+
  
         {/* Price */}
         <div className="flex items-center gap-2 mt-2 ">

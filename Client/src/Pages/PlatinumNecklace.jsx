@@ -49,7 +49,7 @@ function PlatinumNecklace() {
                 />
                 <Card 
                 image={PlatinumNeckle4} 
-                title="Rectangular Link Platinum Chain"
+                title="Rectangular Platinum Chain"
                  newprice="70,000" 
                  oldprice="1,00,000" 
                  discount="30%" 
@@ -65,7 +65,7 @@ function PlatinumNecklace() {
                 />
                 <Card 
                 image={PlatinumNeckle6} 
-                title="Textured Oval Link Platinum Chain" 
+                title="Textured Oval Platinum Chain" 
                 newprice="90,000" 
                 oldprice="1,00,000" 
                 discount="10%" 
@@ -81,7 +81,7 @@ function PlatinumNecklace() {
                 />
                 <Card 
                 image={PlatinumNeckle8} 
-                title="Two-Layer Beaded Platinum Chain" 
+                title=" Beaded Platinum Chain" 
                 newprice="95,000" 
                 oldprice="1,20,00" 
                 discount="20%" 

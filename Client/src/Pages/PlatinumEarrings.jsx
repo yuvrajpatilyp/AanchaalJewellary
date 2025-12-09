@@ -35,15 +35,15 @@ function PlatinumEarrings() {
                    />
                 <Card 
                 image={PlatinumEarring2} 
-                title="Curved Shaped Platinum Earrings" 
+                title="Curved Platinum Earrings" 
                 newprice="56,000" 
                 oldprice="70,000" 
                 discount="20%" 
                 onAddToCart={addToCart}
                  />
-<Card 
+                <Card 
                 image={PlatinumEarring3} 
-                title="Elegant Bloom Platinum Earrings" 
+                title="Elegant Platinum Earrings" 
                 newprice="28,800" 
                 oldprice="32,000" 
                 discount="10%" 
@@ -59,7 +59,7 @@ function PlatinumEarrings() {
                  />
                 <Card 
                 image={PlatinumEarring5} 
-                title="Elegant Infinity Heart Platinum Earrings" 
+                title="Elegant Heart Platinum Earrings" 
                 newprice="64,000" 
                 oldprice="80,000" 
                 discount="20%" 
@@ -67,7 +67,7 @@ function PlatinumEarrings() {
                 />
                 <Card 
                 image={PlatinumEarring6} 
-                title="Elegant Sparkle Platinum Earrings" 
+                title=" Sparkle Platinum Earrings" 
                 newprice="54,000" 
                 oldprice="60,000" 
                 discount="40%" 
