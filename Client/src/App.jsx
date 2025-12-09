@@ -14,10 +14,12 @@ import Earringsbanner from './HomePage/pages/Earringsbanner'
 import ShopBestseller from './HomePage/pages/ShopBestseller'
 import SilverIdolsPage from './HomePage/pages/SilverIdolsPage'
 import MangalsutraPage from './HomePage/pages/MangalsutraPage'
+import CategoryBar from './Reusable/CategoryBar'
 function App() {
   return (
     <div>
-        <NavigationBar/> 
+        <NavigationBar/>
+         <CategoryBar/>
       {/*routes & paths*/}
        <Routes>
  

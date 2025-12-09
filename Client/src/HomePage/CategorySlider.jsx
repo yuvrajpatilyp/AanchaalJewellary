@@ -39,7 +39,6 @@ function CategorySlider() {
             <Link to={`/${item.title.toLowerCase()}`} className="flex flex-col items-center">
 
               {/* Img card */}
-<<<<<<< HEAD
               <div
                 className=" w-32 h-32 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-60 lg:h-60 rounded-xl overflow-hidden shadow-md
                 border-3 border-pink-200  transition-all duration-300 hover:shadow-xl hover:scale-105 bg-white ">
@@ -49,14 +48,6 @@ function CategorySlider() {
                 />
               </div>
 
-=======
-            <div className="w-38 h-38 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48  rounded-xl shadow-md border-[3px] border-pink-300 
-                    hover:border-orange-400 transition-all duration-300 hover:shadow-xl bg-white overflow-hidden">
-               <img
-                 src={item.image}
-                 className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"/>
-            </div>
->>>>>>> 27d5d99c35ed98014a0eae11855921aa9a88af6e
               {/* Title */}
              <p className="mt-3 text-xs sm:text-sm md:text-base tracking-[3px] font-semibold uppercase 
                     hover:underline underline-offset-4 cursor-pointer">

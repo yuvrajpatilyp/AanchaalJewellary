@@ -19,7 +19,7 @@ function JewelleryEssentials() {
             <img src='/src/assets/tradditionalwear.jpg'
                  className=' rounded-xl border-4 border-[#eab676]  shadow-xl h-[400px] w-[400px]  transition delay-150 duration-200 ease-in hover:-translate-y-1 hover:scale-110'></img>
             <p className='py-4 text-2xl capitalize'> Traddional wear </p>
-            </div></Link>
+         </div></Link>
 
         <Link to='/partywear'>
         <div className='  place-items-center text-xl font-serif italic grayscale-50'>
