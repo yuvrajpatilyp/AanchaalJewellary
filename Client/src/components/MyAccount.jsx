@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
+
 function MyAccount() {
   const [info, setInfo] = useState({
     firstName: "",
@@ -293,6 +294,7 @@ function MyAccount() {
           )}
         </div>
       </div>
+     
     </div>
   );
 }
