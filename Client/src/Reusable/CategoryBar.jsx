@@ -41,12 +41,12 @@ export default function CategoryBar() {
           <div className="hidden sm:block border-l h-6"></div>
   
           <FaSearch 
-            className="text-black text-base sm:text-lg cursor-pointer hover:text-black"
+            className="text-black text-base sm:text-lg cursor-pointer hover:text-black "
             onClick={() => setShowSearch(!showSearch)}
           />
         </div>
   
-        {/* SUB MENU WITH LINKS 👇 */}
+       
         {active !== null && categories[active].sub.length > 0 && (
           <div 
             className="flex justify-start lg:justify-center gap-4 lg:gap-10 py-3 border-b text-[9px] sm:text-xs md:text-xs font-semibold font-serif bg-white text-gray-700 overflow-x-auto whitespace-nowrap px-3"

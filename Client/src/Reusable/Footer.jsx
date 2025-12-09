@@ -4,15 +4,14 @@ import { Link } from "react-router-dom";
  
 function Footer() {
   return (
-    <footer className="bg-gray-200 from-gray-50 to-gray-200 text-black pt-14 pb-6">
+    <footer className="bg-gray-200 text-black pt-14 pb-6">
       <div className="max-w-8xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-10 px-20 ">
            
-          {/* Sample logo  */}
+
           <div>
             <img src="src/assets/DesignLogo.png" className="shadow-gray-300 w-40 h-40 rounded-full -ml-6" />
           </div>
  
-        {/* Support Section */}
         <div>
           <h2 className="font-serif text-2xl mb-3 ">Support</h2>
           <p className="text-black text-sm leading-6">
@@ -22,7 +21,6 @@ function Footer() {
           <p className="text-black text-sm mt-2">+919999999999</p>
         </div>
  
-        {/* Account Section */}
         <div>
           <h2 className="font-serif text-2xl mb-3">Account</h2>
           <ul className="text-black text-sm space-y-3">
@@ -36,7 +34,6 @@ function Footer() {
           </ul>
         </div>
  
-        {/* Quick Link Section */}
         <div>
            <h2 className="font-serif  mb-3 text-2xl">Quick Link</h2>
             <ul className="text-black text-sm space-y-3">
