@@ -1,26 +1,22 @@
 
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
-import { Link } from "react-router-dom";
-
-
-// Category and Sub categories 
-
+import { Link } from "react-router-dom"; 
+  
 const categories = [
-  { name: "ALL JEWELLERY", key: "all", sub: ["FINGER RINGS", "NOSE PIN", "BANGLES", "EARRINGS", "MANGALSUTRA", "NECKLACES", "BRACELETS"] },
-  { name: "GOLD", key: "gold", sub: ["ALL CREATION", "GOLD RINGS", "GOLD NOSE PIN", "GOLD EARRINGS", "GOLD MANGALSUTRA", "GOLD NECKLACES", "GOLD BRACELETS"] },
-  { name: "DIAMOND", key: "diamond", sub: ["ALL CREATION", "DIAMOND RINGS", "DIAMOND NOSE PIN", "DIAMOND EARRINGS", "DIAMOND MANGALSUTRA", "DIAMOND NECKLACES", "DIAMOND BRACELETS"] },
-  { name: "SILVER", key: "silver", sub: ["ALL CREATION", "SILVER RINGS", "SILVER NOSE PIN", "SILVER EARRINGS", "SILVER MANGALSUTRA", "SILVER NECKLACES", "SILVER BRACELETS"] },
-  { name: "PLATINUM", key: "platinum", sub: ["ALL CREATION", "PLATINUM RINGS", "PLATINUM NOSE PIN", "PLATINUM EARRINGS", "PLATINUM MANGALSUTRA", "PLATINUM NECKLACES", "PLATINUM BRACELETS"] },
-  { name: "WEDDING", key: "wedding", sub: ["HALDI & MEHNDI COLLECTION", "SANGEET COLLECTION","BRIDAL COLLECTION"] },
-  { name: "COLLECTIONS", key: "collections", sub: ["CASUAL WEAR", "TRADDIONAL WEAR", "PARTY WEAR"] },
+  { name: "ALL JEWELLERY", key: "all", sub: ["RINGS","NOSE PIN","BANGLES","EARRINGS","MANGALSUTRA","NECKLACES","BRACELETS"] },
+  { name: "GOLD", key: "gold", sub: ["ALL CREATION", "GOLD RINGS", "GOLD NOSE PIN", "GOLD EARRINGS", "GOLD MANGALSUTRA", "GOLD NECKLACES","GOLD BRACELETS"] },
+  { name: "DIAMOND", key: "diamond", sub: ["ALL CREATION", "DIAMOND RINGS", "DIAMOND NOSE PIN", "DIAMOND EARRINGS", "DIAMOND MANGALSUTRA", "DIAMOND NECKLACES","DIAMOND BRACELETS"] },
+  { name: "SILVER", key: "silver", sub: ["ALL CREATION", "SILVER RINGS", "SILVER NOSE PIN", "SILVER EARRINGS", "SILVER MANGALSUTRA", "SILVER NECKLACES","SILVER BRACELETS"] },
+  { name: "PLATINUM", key: "platinum", sub: ["ALL CREATION", "PLATINUM RINGS", "PLATINUM NOSE PIN", "PLATINUM EARRINGS", "PLATINUM MANGALSUTRA", "PLATINUM NECKLACES","PLATINUM BRACELETS"] },
+  { name: "WEDDING", key: "wedding", sub: ["HALDI & MEHENDI COLLECTION","SANGEET COLLECTION","BRIDAL COLLECTION"] },
+  { name: "COLLECTIONS", key: "collections", sub: ["CASUAL WEAR","TRADITIONAL WEAR","PARTY WEAR"] },
 ];
-
-
+  
 export default function CategoryBar() {
   const [active, setActive] = useState(null);
   const [showSearch, setShowSearch] = useState(false);
-
+  
   return (
     <>
       <div
@@ -42,18 +38,18 @@ export default function CategoryBar() {
               )}
             </div>
           ))}
-
+  
           <div className="hidden sm:block border-l h-6"></div>
-
-          <FaSearch
-            className="text-black text-base sm:text-lg cursor-pointer hover:text-black"
+  
+          <FaSearch 
+            className="text-black text-base sm:text-lg cursor-pointer hover:text-black "
             onClick={() => setShowSearch(!showSearch)}
           />
         </div>
-
-        {/* SUB MENU WITH LINKS  */}
+  
+       
         {active !== null && categories[active].sub.length > 0 && (
-          <div
+          <div 
             className="flex justify-start lg:justify-center gap-4 lg:gap-10 py-3 border-b text-[9px] sm:text-xs md:text-xs font-semibold font-serif bg-white text-gray-700 overflow-x-auto whitespace-nowrap px-3"
           >
             {categories[active].sub.map((item, idx) => {
@@ -71,12 +67,12 @@ export default function CategoryBar() {
           </div>
         )}
       </div>
-
+  
       {showSearch && (
         <div className="flex flex-col sm:flex-row justify-center py-4 gap-3 px-4">
-          <input
-            type="text"
-            placeholder="Search products"
+          <input 
+            type="text" 
+            placeholder="Search products" 
             className="border-b w-full sm:w-80 px-2 outline-none text-gray-600"
           />
           <button className="bg-black text-white px-4 py-2 text-sm w-full sm:w-auto">
