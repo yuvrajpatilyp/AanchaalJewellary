@@ -16,6 +16,8 @@ import ShopBestseller from './HomePage/pages/ShopBestseller'
 import SilverIdolsPage from './HomePage/pages/SilverIdolsPage'
 import MangalsutraPage from './HomePage/pages/MangalsutraPage'
 import CategoryBar from './Reusable/CategoryBar'
+import MyAccount from './components/MyAccount'
+import Contact from './contact/Contact'
 function App() {
   return (
     <div>
@@ -46,6 +48,8 @@ function App() {
           <Route path='/silver-idols' element={<SilverIdolsPage />} />
           <Route path='/mangalsutra' element={<MangalsutraPage />} />
             
+          <Route path='/myAccount' element={<MyAccount />} />
+          <Route path='/contact' element={<Contact />} />
        </Routes> 
        <Footer />    
      

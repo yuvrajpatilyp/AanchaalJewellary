@@ -1,13 +1,13 @@
 import React from 'react'
 import { FaRegHeart, FaRegUser } from "react-icons/fa";
-
+import { Link } from "react-router-dom";  
 function NavigationBar() {
   return (
     <nav className="flex flex-wrap justify-between items-center px-6 md:px-10 py-4 border-b border-gray-200">
 
       <div className="flex gap-4 md:gap-8 text-xs md:text-sm tracking-wide font-medium text-black w-full md:w-auto justify-center md:justify-start py-2 md:py-0">
         <ul className="hover:text-black duration-200 flex space-x-6" >
-            <li>CONTACT US</li>
+            <li><Link to="/contact">CONTACT US</Link></li>
             <li>SERVICES</li>
         </ul>
       </div>
