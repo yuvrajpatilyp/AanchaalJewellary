@@ -1,8 +1,8 @@
 import React from "react";
-import NavigationBar from "./Reusable/NavigationBar";
+// import NavigationBar from "./Reusable/NavigationBar";
 import CategoryBar from "./Reusable/CategoryBar";
 import Login from "./Login/Login";
-import Footer from "./Reusable/Footer";
+// import Footer from "./Reusable/Footer";
 import { Route, Routes } from "react-router-dom";
 import Forgotpassword from "./Login/Forgotpassword";
 import Verifyotp from "./Login/Verifyotp";
@@ -11,7 +11,7 @@ import Resetpassword from "./Login/Resetpassword";
 function App() {
   return (
     <div>
-      <NavigationBar />
+      {/* <NavigationBar /> */}
 
       <Routes>
         <Route path="/" element={<Login />} />
@@ -20,7 +20,7 @@ function App() {
         <Route path="/reset-password" element={<Resetpassword />} />
       </Routes>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

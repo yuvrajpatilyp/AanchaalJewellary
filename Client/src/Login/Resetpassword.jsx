@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 
 export default function Resetpassword() {
   const [pass, setPass] = useState("");
   const [confirm, setConfirm] = useState("");
+  const [showPass, setShowPass] = useState(false);
+  const [showConfirm, setShowConfirm] = useState(false);
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
@@ -29,37 +32,73 @@ export default function Resetpassword() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-6">
-      <h1 className="text-3xl font-serif font-bold mb-4">Create New Password</h1>
+    <div className="min-h-screen flex items-center justify-center px-6 bg-gray-100">
 
-      <input
-        type="password"
-        value={pass}
-        onChange={(e) => setPass(e.target.value)}
-        placeholder="New Password"
-        className="border w-full max-w-md px-4 py-3 rounded-lg mb-2"
-      />
+      
+      <style>{`
+        input[type="password"]::-webkit-textfield-decoration-container { display: none !important; }
+        input[type="password"]::-ms-reveal,
+        input[type="password"]::-ms-clear { display: none !important; }
+        input::-webkit-credentials-auto-fill-button { display: none !important; }
+      `}</style>
 
-      <input
-        type="password"
-        value={confirm}
-        onChange={(e) => setConfirm(e.target.value)}
-        placeholder="Confirm Password"
-        className="border w-full max-w-md px-4 py-3 rounded-lg mb-2"
-      />
+      
+      <div className="bg-gray-200 w-full max-w-md p-8 rounded-2xl shadow-md">
 
-      {error && (
-        <p className="text-red-600 text-sm -mt-2 mb-4 text-center max-w-md">
-          {error}
-        </p>
-      )}
+        <h1 className="text-3xl font-serif font-bold mb-6 text-center">
+          Create New Password
+        </h1>
 
-      <button
-        onClick={handleReset}
-        className="bg-pink-700 text-white px-6 py-3 rounded-lg w-full max-w-md cursor-pointer"
-      >
-        Submit
-      </button>
+        
+        <div className="relative w-full mb-4">
+          <input
+            type={showPass ? "text" : "password"}
+            value={pass}
+            onChange={(e) => setPass(e.target.value)}
+            placeholder="New Password"
+            className="border w-full px-4 py-3 rounded-lg focus:ring-2 focus:ring-pink-400 outline-none"
+          />
+
+          <span
+            onClick={() => setShowPass(!showPass)}
+            className="absolute right-4 top-3.5 cursor-pointer text-xl text-gray-600"
+          >
+            {showPass ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
+          </span>
+        </div>
+
+        
+        <div className="relative w-full mb-2">
+          <input
+            type={showConfirm ? "text" : "password"}
+            value={confirm}
+            onChange={(e) => setConfirm(e.target.value)}
+            placeholder="Confirm Password"
+            className="border w-full px-4 py-3 rounded-lg focus:ring-2 focus:ring-pink-400 outline-none"
+          />
+
+          <span
+            onClick={() => setShowConfirm(!showConfirm)}
+            className="absolute right-4 top-3.5 cursor-pointer text-xl text-gray-600"
+          >
+            {showConfirm ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
+          </span>
+        </div>
+
+        {error && (
+          <p className="text-red-600 text-sm mb-4 text-center">
+            {error}
+          </p>
+        )}
+
+        <button
+          onClick={handleReset}
+          className="bg-pink-700 text-white px-6 py-3 rounded-lg w-full cursor-pointer"
+        >
+          Submit
+        </button>
+
+      </div>
     </div>
   );
 }

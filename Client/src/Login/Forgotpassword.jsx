@@ -13,9 +13,8 @@ export default function Forgotpassword() {
     const value = e.target.value;
     setInput(value);
 
-    
     if (emailRegex.test(value) || mobileRegex.test(value)) {
-      setError(""); 
+      setError("");
     } else {
       setError("Enter a valid email or 10-digit mobile number");
     }
@@ -30,32 +29,43 @@ export default function Forgotpassword() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-6">
-      <h1 className="text-3xl font-serif font-bold mb-4">Forgot Password</h1>
+    <div className="min-h-screen flex items-center justify-center px-6 bg-gray-100">
 
-      <input
-        type="text"
-        value={input}
-        onChange={handleInputChange}
-        placeholder="Enter Email or Mobile Number"
-        className="border w-full max-w-md px-4 py-3 rounded-lg mb-2"
-      />
+      
+      <div className="bg-gray-200 w-full max-w-md p-8 rounded-2xl shadow-md">
 
-      {error && (
-        <p className="text-red-600 text-sm mb-2">{error}</p>
-      )}
+        <h1 className="text-3xl font-serif font-bold mb-6 text-center">
+          Forgot Password
+        </h1>
 
-      <button
-        onClick={handleSendOtp}
-        disabled={!!error || input === ""}
-        className={`px-6 py-3 rounded-lg w-full max-w-md text-white
-          ${error || input === "" ? "bg-pink-400" : "bg-pink-700 cursor-pointer"}`}>
-        Send OTP
-      </button>
+        <input
+          type="text"
+          value={input}
+          onChange={handleInputChange}
+          placeholder="Enter Email or Mobile Number"
+          className="border w-full px-4 py-3 rounded-lg mb-2 focus:ring-2 focus:ring-pink-400 outline-none"
+        />
 
-      <Link to="/" className="text-blue-600 underline mt-4">
-        Back to Login
-      </Link>
+        {error && (
+          <p className="text-red-600 text-sm mb-2">{error}</p>
+        )}
+
+        <button
+          onClick={handleSendOtp}
+          disabled={!!error || input === ""}
+          className={`px-6 py-3 rounded-lg w-full text-white font-medium
+            ${error || input === "" ? "bg-pink-400" : "bg-pink-700 cursor-pointer"}`}
+        >
+          Send OTP
+        </button>
+
+        <Link
+          to="/"
+          className="text-blue-600 underline mt-4 block text-center"
+        >
+          Back to Login
+        </Link>
+      </div>
     </div>
   );
 }

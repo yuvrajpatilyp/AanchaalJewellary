@@ -5,7 +5,7 @@ export default function Verifyotp() {
   const [otp, setOtp] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
-  
+
   const otpRegex = /^[0-9]{6}$/;
 
   const handleChange = (e) => {
@@ -13,7 +13,7 @@ export default function Verifyotp() {
 
     if (/^[0-9]*$/.test(value)) {
       setOtp(value);
-
+      setError(""); 
     }
   };
 
@@ -27,29 +27,38 @@ export default function Verifyotp() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-6">
-      <h1 className="text-3xl font-serif font-bold mb-4">Verify OTP</h1>
+    <div className="min-h-screen flex items-center justify-center px-6 bg-gray-100">
 
-      <input
-        type="text"
-        value={otp}
-        onChange={handleChange}
-        maxLength={6}
-        placeholder="Enter 6-digit OTP"
-        className="border w-full max-w-md px-4 py-3 rounded-lg mb-2"
-      />
+      
+      <div className="bg-gray-200 w-full max-w-md p-8 rounded-2xl shadow-md">
+        
+        <h1 className="text-3xl font-serif font-bold mb-6 text-center">
+          Verify OTP
+        </h1>
 
-      {error && <p className="text-red-600 text-sm mb-2">{error}</p>}
+        <input
+          type="text"
+          value={otp}
+          onChange={handleChange}
+          maxLength={6}
+          placeholder="Enter 6-digit OTP"
+          className="border w-full px-4 py-3 rounded-lg mb-2 focus:ring-2 focus:ring-pink-400 outline-none"
+        />
 
-      <button
-        onClick={handleVerify}
-        disabled={!!error || otp.length !== 6}
-        className={`px-6 py-3 rounded-lg w-full max-w-md text-white
-          ${error || otp.length !== 6 ? "bg-pink-400" : "bg-pink-700 cursor-pointer"}
-        `}
-      >
-        Submit OTP
-      </button>
+        {error && (
+          <p className="text-red-600 text-sm mb-2">{error}</p>
+        )}
+
+        <button
+          onClick={handleVerify}
+          disabled={!!error || otp.length !== 6}
+          className={`px-6 py-3 rounded-lg w-full text-white font-medium
+            ${error || otp.length !== 6 ? "bg-pink-400" : "bg-pink-700 cursor-pointer"}`}
+        >
+          Submit OTP
+        </button>
+
+      </div>
     </div>
   );
 }
