@@ -7,7 +7,7 @@ import "swiper/css";
 function SlideBanner() {
   const slides = [
   {
-  img: "src/assets/slide-img2.jpg",
+  img: "src/assets/BannerImg/slide-img2.jpg",
   title: "Elegance in Every Pearl",
   desc: "Wear the beauty that never fades",
   btn: "Shop Now",
@@ -23,7 +23,7 @@ function SlideBanner() {
   },
 
   {
-  img: "src/assets/slide-img5.jpg",
+  img: "src/assets/BannerImg/slide-img5.jpg",
   title: "Sparkle That Moves With You",
   btn: "Explore Now",
   link: "/earrings",
@@ -38,7 +38,7 @@ function SlideBanner() {
   },
    
   {
-  img: "src/assets/slide-img3.jpg",
+  img: "src/assets/BannerImg/slide-img3.jpg",
   title: "A Promise for a Lifetime",
   btn: "Shop Now",
   link: "/ring",
@@ -53,7 +53,7 @@ function SlideBanner() {
   },
 
   {
-  img: "src/assets/slide-img4.jpg",
+  img: "src/assets/BannerImg/slide-img4.jpg",
   title: "Feel the Luxury of Gold",
   desc: "Celebrate moments that matter",
   btn: "Explore Now",
@@ -69,7 +69,7 @@ function SlideBanner() {
   },
 
   {
-  img: "src/assets/slide-img8.jpg",
+  img: "src/assets/BannerImg/slide-img8.jpg",
   title: "Shine Like Never Before",
   desc: "Discover breathtaking diamond necklaces",
   btn: "Explore Now",

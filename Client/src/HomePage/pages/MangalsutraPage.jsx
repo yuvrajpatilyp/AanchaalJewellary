@@ -13,47 +13,45 @@ const MangalsutraPage = () => {
       title: "Classy Ring Mangalsutra",
       newprice: "1,55,999",
       oldprice: "1,56,999",
-      image: "src/assets/product6.jpg",
-      hoverImage: "src/assets/product6.jpg",
+      image: "src/assets/NewarrivalImg/product6.jpg",
+      hoverImage: "src/assets/NewarrivalImg/product6.jpg",
       Bestseller: "Bestseller",
     },
     {
       title: "Pyramid Harmony Gold Mangalsutra",
       newprice: "60,499",
       oldprice: "61,299",
-      image: "src/assets/product7.webp",
-      hoverImage: "src/assets/product7.webp",
+      image: "src/assets/NewarrivalImg/product7.webp",
+      hoverImage: "src/assets/NewarrivalImg/product7.webp",
       Bestseller: false,
     },
     {
       title: "Hexa Charm Diamond Mangalsutra",
       newprice: "1,15,699",
       oldprice: "1,16,999",
-      image: "src/assets/product8.webp",
-      hoverImage: "src/assets/product8.webp",
+      image: "src/assets/NewarrivalImg/product8.webp",
+      hoverImage: "src/assets/NewarrivalImg/product8.webp",
       Bestseller: true,
     },
     {
       title: "Floral Spark Diamond Mangalsutra",
       newprice: "1,01,299",
       oldprice: "1,02,999",
-      image: "src/assets/product9.webp",
-      hoverImage: "src/assets/product9.webp",
+      image: "src/assets/NewarrivalImg/product9.webp",
+      hoverImage: "src/assets/NewarrivalImg/product9.webp",
       Bestseller: true,
     },
     {
       title: "Sparkling Simplicity Diamond Mangalsutra",
       newprice: "69,299",
       oldprice: "7,999",
-      image: "src/assets/product10.webp",
-      hoverImage: "src/assets/product10.webp",
+      image: "src/assets/NewarrivalImg/product10.webp",
+      hoverImage: "src/assets/NewarrivalImg/product10.webp",
       Bestseller: false,
     },
   ];
 
   const [products, setProducts] = useState(productsData);
-
-  
 
   return (
     <div className="w-full">
@@ -72,8 +70,7 @@ const MangalsutraPage = () => {
                  <SortDropdown
                      productsData={productsData}
                      onSort={(updatedList) => setProducts(updatedList)}
-                  />
-                
+                  />               
               </div>
             </div>
 

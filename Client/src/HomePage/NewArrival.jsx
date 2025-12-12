@@ -7,7 +7,7 @@ const NewArrivalsPage = () => {
       {/* Hero banner */}
       <div className="relative w-full h-[380px] md:h-[480px] lg:h-[420px]">
         <img
-          src="src/assets/slide-img9.jpg"
+          src="src\assets\BannerImg\slide-img9.jpg"
           alt="banner"
           className="w-full h-full object-cover"
         />
@@ -37,7 +37,7 @@ const NewArrivalsPage = () => {
           className="relative w-full md:w-1/2 rounded-xl overflow-hidden border-8 border-white shadow-xl cursor-pointer hover:scale-[1.02] transition"
         >
           <img
-            src="src/assets/newarrival1.jpg"
+            src="src\assets\NewarrivalImg\newarrival1.jpg"
             alt="Silver Idols"
             className="w-full h-[300px] md:h-[350px] object-cover"
           />
@@ -52,7 +52,7 @@ const NewArrivalsPage = () => {
           className="relative w-full md:w-1/2 rounded-xl overflow-hidden border-8 border-white shadow-xl cursor-pointer hover:scale-[1.02] transition"
         >
           <img
-            src="src/assets/newarrival2.webp"
+            src="src\assets\NewarrivalImg\newarrival2.webp"
             alt="Mangalsutra"
             className="w-full h-[300px] md:h-[350px] object-cover"
           />

@@ -12,10 +12,10 @@ function Earringsbanner() {
   };
 
   const sliderData = [
-    { img: "src/assets/earrings4.webp", title: "Artiful simplicity of HOOPS for the modern you!" },
-    { img: "src/assets/earrings2.webp", title: "The future wears JHUMKAS with the modern spirit!"},
-    { img: "src/assets/earrings3.webp", title: "Call to cocktails, DROPS for everyday and beyond!"},
-    { img: "src/assets/earrings1.webp", title: "Elevate the everyday with, STUDS that crray grace!"},
+    { img: "src/assets/Earrings/earrings4.webp", title: "Artiful simplicity of HOOPS for the modern you!" },
+    { img: "src/assets/Earrings/earrings2.webp", title: "The future wears JHUMKAS with the modern spirit!"},
+    { img: "src/assets/Earrings/earrings3.webp", title: "Call to cocktails, DROPS for everyday and beyond!"},
+    { img: "src/assets/Earrings/earrings1.webp", title: "Elevate the everyday with, STUDS that crray grace!"},
 ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -25,7 +25,7 @@ function Earringsbanner() {
       title: "Radiant Aura Gold Stud Earrings",
       newprice: "42,699",
       oldprice: "45,999",
-      image: "src/assets/earrings5.webp",
+      image: "src/assets/Earrings/earrings5.webp",
       hoverImage: "",
       Bestseller: true,
       onAddToCart: handleAddToCart,
@@ -34,7 +34,7 @@ function Earringsbanner() {
       title: "Twirl Glint Diamond Drop Earrings",
       newprice: "44,699",
       oldprice: "47,999",
-      image: "src/assets/earrings6.webp",
+      image: "src/assets/Earrings/earrings6.webp",
       hoverImage: "",
       Bestseller: false,
       onAddToCart: handleAddToCart,
@@ -43,7 +43,7 @@ function Earringsbanner() {
       title: "Silver Pretty Bow Kids Stud Earrings",
       newprice: "16,699",
       oldprice: "17,999",
-      image: "src/assets/earrings7.webp",
+      image: "src/assets/Earrings/earrings7.webp",
       hoverImage: "",
       Bestseller: false,
       onAddToCart: handleAddToCart,
@@ -52,7 +52,7 @@ function Earringsbanner() {
       title: "Silver Zircon Drizzle Drop Earrings",
       newprice: "2,699",
       oldprice: "5,999",
-      image: "src/assets/earrings8.webp",
+      image: "src/assets/Earrings/earrings8.webp",
       hoverImage: "",
       Bestseller: true,
       onAddToCart: handleAddToCart,
@@ -61,7 +61,7 @@ function Earringsbanner() {
       title: "Golden Petal Gold Drop Earrings",
       newprice: "66,699",
       oldprice: "67,999",
-      image: "src/assets/earrings9.webp",
+      image: "src/assets/Earrings/earrings9.webp",
       hoverImage: "",
       Bestseller: false,
       onAddToCart: handleAddToCart,
@@ -70,7 +70,7 @@ function Earringsbanner() {
       title: "Splendid Gold Jhumka Earrings",
       newprice: "63,699",
       oldprice: "67,999",
-      image: "src/assets/earrings10.webp",
+      image: "src/assets/Earrings/earrings10.webp",
       hoverImage: "",
       Bestseller: false,
       onAddToCart: handleAddToCart,
@@ -79,7 +79,7 @@ function Earringsbanner() {
       title: "Lotus Bloom Gold Jhumka Earrings",
       newprice: "73,699",
       oldprice: "77,999",
-      image: "src/assets/earrings11.webp",
+      image: "src/assets/Earrings/earrings11.webp",
       hoverImage: "",
       Bestseller: false,
       onAddToCart: handleAddToCart,
@@ -105,7 +105,7 @@ function Earringsbanner() {
         className="relative w-full h-[260px] sm:h-[350px] md:h-[450px] lg:h-[520px] overflow-hidden cursor-pointer"
       >
         <img
-          src="src\assets\slide-img9.jpg"
+          src="src\assets\BannerImg\slide-img9.jpg"
           className="w-full h-full object-cover"
           alt="Pearl Banner"
         />
