@@ -41,6 +41,7 @@ function SlideBanner() {
   img: "src/assets/slide-img3.jpg",
   title: "A Promise for a Lifetime",
   btn: "Shop Now",
+  link: "/ring",
   titleStyle:
     "uppercase tracking-[3px] sm:tracking-[6px] text-xl sm:text-3xl md:text-5xl font-bold bg-gradient-to-r from-yellow-300 to-red-500 bg-clip-text text-transparent drop-shadow-xl",
   descStyle:
@@ -56,6 +57,7 @@ function SlideBanner() {
   title: "Feel the Luxury of Gold",
   desc: "Celebrate moments that matter",
   btn: "Explore Now",
+  link: "/gold",
   titleStyle:
     "text-xl sm:text-3xl md:text-5xl font-bold bg-gradient-to-r from-yellow-200 to-red-500 bg-clip-text text-transparent drop-shadow-xl",
   descStyle:
@@ -71,6 +73,7 @@ function SlideBanner() {
   title: "Shine Like Never Before",
   desc: "Discover breathtaking diamond necklaces",
   btn: "Explore Now",
+  link: "/necklace",
   titleStyle:
     "text-xl sm:text-3xl md:text-5xl font-bold bg-gradient-to-r from-white to-red-500 bg-clip-text text-transparent drop-shadow-xl",
   descStyle:

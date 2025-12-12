@@ -7,7 +7,7 @@ import "swiper/css";
 const categories = [
   { title: "NEWARRIVAL", image: "src/assets/newarrival3.jpg" },
   { title: "BANGLES", image: "src/assets/bangles1.webp" },
-  { title: "EARRINGS", image: "src/assets/earrings1.webp" },
+  { title: "EARRING", image: "src/assets/earrings1.webp" },
   { title: "BRACELETS", image: "src/assets/pearl11hover.webp" },
   { title: "RINGS", image: "src/assets/ring1.webp" },
   { title: "NECKLACES", image: "src/assets/necklace1.jpg" },
@@ -26,8 +26,6 @@ function CategorySlider() {
         spaceBetween={20}
         slidesPerView={2}
         breakpoints={{
-          480: { slidesPerView: 3 },
-          640: { slidesPerView: 3 },
           768: { slidesPerView: 4 },
           1024: { slidesPerView: 5 },
           1280: { slidesPerView: 5 },

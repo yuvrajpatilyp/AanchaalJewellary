@@ -90,9 +90,8 @@ function CasualWear() {
     <div className="w-full">
 
       {/* Navigation + Sort */}
-      <div className="max-w-6xl mx-auto mt-6 px-4 sm:px-6 md:px-0">
-        
-        {/* breadcrumb */}
+      <div className="max-w-6xl mx-auto mt-6 px-4 sm:px-6 md:px-8">
+
         <div className="flex items-center gap-2 text-gray-500 text-xs sm:text-sm">
           <Link to="/" className="hover:underline">Home</Link>
           <span>{">"}</span>
@@ -113,15 +112,10 @@ function CasualWear() {
       </div>
 
       {/* Product Grid */}
-      <div className="
-        max-w-7xl mx-auto 
-        grid 
-        grid-cols-2 sm:grid-cols-2 
-        md:grid-cols-3 lg:grid-cols-3 
-        gap-4 sm:gap-6 
-        px-3 sm:px-4 md:px-6 
-        py-8
-      ">
+      <div
+        className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 
+        lg:grid-cols-4 gap-4 sm:gap-6 px-3 sm:px-4 md:px-6 lg:px-8py-8"
+      >
         {products.map((item, i) => (
           <Card
             key={i}
