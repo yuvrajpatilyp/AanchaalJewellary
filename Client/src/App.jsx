@@ -16,43 +16,45 @@ import ShopBestseller from './HomePage/pages/ShopBestseller'
 import SilverIdolsPage from './HomePage/pages/SilverIdolsPage'
 import MangalsutraPage from './HomePage/pages/MangalsutraPage'
 import CategoryBar from './Reusable/CategoryBar'
+import CheckoutPage from './Checkout/CheckoutPage'
 function App() {
   return (
-    <div>
-        <NavigationBar/>
-         <CategoryBar/>
-      {/*routes & paths*/}
-       <Routes>
+    // <div>
+    //     <NavigationBar/>
+    //      <CategoryBar/>
+    //   {/*routes & paths*/}
+    //    <Routes>
  
-           {/* */}
-          <Route path='/' element={<Home/>}/>
-          <Route path='/casual' element={<CasualWear/>} />
-          <Route path='/tradditional' element={<Tradditional/>}/>
-          <Route path='/partywear' element={<PartyWear/>}/>
-          <Route path='/womenscollection' element={<Womenscollection/>}/>
-          <Route path='/menscollection' element={<Menscollection/>}/>
-          <Route path='/kidscollection' element={<Kidscollection/>}/>
+    //        {/* */}
+    //       <Route path='/' element={<Home/>}/>
+    //       <Route path='/casual' element={<CasualWear/>} />
+    //       <Route path='/tradditional' element={<Tradditional/>}/>
+    //       <Route path='/partywear' element={<PartyWear/>}/>
+    //       <Route path='/womenscollection' element={<Womenscollection/>}/>
+    //       <Route path='/menscollection' element={<Menscollection/>}/>
+    //       <Route path='/kidscollection' element={<Kidscollection/>}/>
 
-          {/**/}
-          <Route path='/pearl' element={<HeroBanner/>}/>
-          <Route path='/earrings' element={<Earringsbanner/>}/>
+    //       {/**/}
+    //       <Route path='/pearl' element={<HeroBanner/>}/>
+    //       <Route path='/earrings' element={<Earringsbanner/>}/>
 
-          {/*best sellers*/}
+    //       {/*best sellers*/}
 
-          <Route path='/shop' element={<ShopBestseller/>}/>
+    //       <Route path='/shop' element={<ShopBestseller/>}/>
           
-           {/* nwe arrival*/}
+    //        {/* nwe arrival*/}
              
-          <Route path='/silver-idols' element={<SilverIdolsPage />} />
-          <Route path='/mangalsutra' element={<MangalsutraPage />} />
+    //       <Route path='/silver-idols' element={<SilverIdolsPage />} />
+    //       <Route path='/mangalsutra' element={<MangalsutraPage />} />
             
-       </Routes> 
-       <Footer />    
+    //    </Routes> 
+    //    <Footer />    
      
-    </div>
+    // </div>
     // <Routes>
     //   <Route path="/" element={<Footer/>} />
     // </Routes>
+    <CheckoutPage/>
   )
 }
  
