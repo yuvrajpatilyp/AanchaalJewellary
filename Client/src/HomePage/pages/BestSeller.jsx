@@ -6,7 +6,7 @@ const PearlBanner = () => {
     <div className="w-full  px-4 sm:px-8 md:px-20 lg:px-30 py-8">
       <div className="relative w-full rounded-3xl overflow-hidden flex items-end shadow-xl min-h-[220px] 
       sm:min-h-[300px] md:min-h-[380px] lg:min-h-[460px] bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('src/assets/slide-img10.jpg')" }}
+      style={{ backgroundImage: "url('src/assets/BannerImg/slide-img10.jpg')" }}
       >
 
       <div className="absolute inset-0 bg-linear-to-r from-black/80 via-black/50 to-transparent"></div>

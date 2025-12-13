@@ -41,13 +41,6 @@ function Card({ title, newprice, oldprice, image, hoverImage,Bestseller, onAddTo
       </div>
 
       <div className="px-4 py-3">
-       
-        
-        <h2
-          className="text-lg font-semibold text-gray-800 text-left "
-        >
-          {title}
-        </h2> 
 
         <h2 className="text-lg font-semibold text-gray-800 text-left">
          {title}

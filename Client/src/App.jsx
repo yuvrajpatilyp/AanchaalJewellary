@@ -16,6 +16,16 @@ import ShopBestseller from './HomePage/pages/ShopBestseller'
 import SilverIdolsPage from './HomePage/pages/SilverIdolsPage'
 import MangalsutraPage from './HomePage/pages/MangalsutraPage'
 import CategoryBar from './Reusable/CategoryBar'
+import MyAccount from './components/MyAccount'
+import Contact from './contact/Contact'
+import DiamondNecklace from './Pages/DiamondNecklace'
+import GoldNecklace from './Pages/GoldNecklace'
+import PlatinumRings from './Pages/PlatinumRings'
+import DiamondEarrings from './Pages/DiamondEarrings'
+import GoldBangles from './Pages/GoldBangles'
+import DiamondBangles from './Pages/DiamondBangles'
+import SilverRings from './Pages/SilverRings'
+import SilverNecklace from './Pages/SilverNecklace'
 function App() {
   return (
     <div>
@@ -32,27 +42,36 @@ function App() {
           <Route path='/womenscollection' element={<Womenscollection/>}/>
           <Route path='/menscollection' element={<Menscollection/>}/>
           <Route path='/kidscollection' element={<Kidscollection/>}/>
-
-          {/**/}
+          
+          {/*slide banner*/}
           <Route path='/pearl' element={<HeroBanner/>}/>
           <Route path='/earrings' element={<Earringsbanner/>}/>
+          <Route path='/necklace' element={<DiamondNecklace/>}/>
+          <Route path='/gold' element={<GoldNecklace/>}/>
+          <Route path='/ring' element={<PlatinumRings/>}/>
+          
+          {/* category slider */}
+          <Route path='/earring' element={<DiamondEarrings/>}/>
+          <Route path='/bangles' element={<GoldBangles/>}/>
+          <Route path='/bracelets' element={<DiamondBangles/>}/>
+          <Route path='/rings' element={<SilverRings/>}/>
+          <Route path='/necklaces' element={<SilverNecklace/>}/>
 
-          {/*best sellers*/}
-
+          {/* best sellers */}
           <Route path='/shop' element={<ShopBestseller/>}/>
           
-           {/* nwe arrival*/}
-             
+          {/* new arrival */}   
           <Route path='/silver-idols' element={<SilverIdolsPage />} />
           <Route path='/mangalsutra' element={<MangalsutraPage />} />
-            
+
+           {/*  */}
+          {/* <Route path='/myAccount' element={<MyAccount />} />
+          <Route path='/contact' element={<Contact />} /> */}
        </Routes> 
        <Footer />    
      
     </div>
-    // <Routes>
-    //   <Route path="/" element={<Footer/>} />
-    // </Routes>
+   
   )
 }
  

@@ -5,14 +5,14 @@ import { Link } from "react-router-dom";
 import "swiper/css";
 
 const categories = [
-  { title: "NEWARRIVAL", image: "src/assets/newarrival3.jpg" },
-  { title: "BANGLES", image: "src/assets/bangles1.webp" },
-  { title: "EARRINGS", image: "src/assets/earrings1.webp" },
-  { title: "BRACELETS", image: "src/assets/pearl11hover.webp" },
-  { title: "RINGS", image: "src/assets/ring1.webp" },
-  { title: "NECKLACES", image: "src/assets/necklace1.jpg" },
-  { title: "NOSE RING", image: "src/assets/nosepin.webp" },
-  { title: "MANGALSUTRA", image: "src/assets/product6.jpg" },
+  { title: "NEWARRIVAL", image: "src/assets/NewarrivalImg/newarrival3.jpg" },
+  { title: "BANGLES", image: "src/assets/NewarrivalImg/bangles1.webp" },
+  { title: "EARRING", image: "src/assets/Earrings/earrings1.webp" },
+  { title: "BRACELETS", image: "src/assets/Pearl/pearl11hover.webp" },
+  { title: "RINGS", image: "src/assets/NewarrivalImg/ring1.webp" },
+  { title: "NECKLACES", image: "src/assets/NewarrivalImg/necklace1.jpg" },
+  { title: "NOSE RING", image: "src/assets/NewarrivalImg/nosepin.webp" },
+  { title: "MANGALSUTRA", image: "src/assets/NewarrivalImg/product6.jpg" },
 ];
 
 function CategorySlider() {
@@ -26,8 +26,6 @@ function CategorySlider() {
         spaceBetween={20}
         slidesPerView={2}
         breakpoints={{
-          480: { slidesPerView: 3 },
-          640: { slidesPerView: 3 },
           768: { slidesPerView: 4 },
           1024: { slidesPerView: 5 },
           1280: { slidesPerView: 5 },
@@ -41,7 +39,7 @@ function CategorySlider() {
               {/* Img card */}
               <div
                 className=" w-32 h-32 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-60 lg:h-60 rounded-xl overflow-hidden shadow-md
-                border-3 border-pink-200  transition-all duration-300 hover:shadow-xl hover:scale-105 bg-white ">
+                border-3 border-pink-200  transition-all duration-300  hover:scale-100 bg-white ">
                 <img
                   src={item.image}
                   className="w-full h-full object-cover transition-all duration-300 hover:scale-110"
